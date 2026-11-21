@@ -3084,3 +3084,29 @@ body{background:#FFF8EC;color:#3E1020}
 .menu-category-bar{background:#D99A28!important;color:#3E1020!important}
 .sn-logo-cow{color:#D99A28!important}
 .food-photo-pending{background:linear-gradient(135deg,#561B2A,#3E1020);color:#D99A28}
+
+/* DEHLI KAMAL — HERITAGE THEME AND CATEGORY REPAIR */
+:root{--burgundy:#561B2A;--deep:#3E1020;--red:#561B2A;--red-hover:#3E1020;--gold:#D99A28;--cream:#FFF8EC;--panel:#561B2A;--premium-red:#561B2A;--premium-yellow:#D99A28;--premium-ivory:#FFF8EC}
+html{scroll-behavior:smooth}body{background:#FFF8EC;color:#561B2A}
+.order-modal,.order-modal-content{background:#FFF8EC!important;color:#561B2A!important}
+.order-modal-banner{background:#561B2A!important;color:#FFF8EC!important}
+.order-modal-logo{background:#D99A28!important;color:#561B2A!important}
+.order-modal-content h2,.order-modal-content label,.branch-location-card strong{color:#561B2A!important}
+.order-type-btn.active,.order-modal-select,.use-location-btn{background:#561B2A!important;color:#FFF8EC!important;border-color:#561B2A!important}
+.order-type-btn:not(.active){background:#FFF8EC!important;color:#561B2A!important;border:1px solid #D99A28!important}
+.order-modal select,.order-modal input{background:#fff!important;color:#561B2A!important;border:1px solid #d9b889!important}
+.branch-location-card{background:#fff3dc!important;border:1px solid #D99A28!important;color:#561B2A!important}
+.menu-category-bar{background:#FFF8EC!important;color:#561B2A!important;border-bottom:1px solid #ead7b5}
+.menu-category-link{color:#561B2A!important}.menu-category-link.active{color:#561B2A!important;font-weight:800}
+.dkn-menu-section{padding-top:34px;padding-bottom:28px;scroll-margin-top:120px}
+.dkn-section-heading{text-align:center;padding:16px 16px 28px}
+.dkn-section-heading span{font-size:11px;letter-spacing:.2em;font-weight:700;color:#a87520}
+.dkn-section-heading h2{font-family:Georgia,serif;font-size:clamp(32px,5vw,54px);margin:9px 0;color:#561B2A}
+.dkn-gold-rule{height:3px;width:76px;background:#D99A28;margin:0 auto;border-radius:3px}
+.dkn-food-img{display:block;width:100%;height:100%;min-height:180px;object-fit:cover;object-position:center}
+.food-image{overflow:hidden;background:#f4e7ce}
+.food-card{background:#fffdf8!important;border:1px solid #ecdcc5!important}
+.food-card .price{color:#561B2A!important}
+.add-btn{background:#561B2A!important;color:#fff!important}
+.sn-hero-photo img{width:100%;height:100%;object-fit:cover}
+@media(max-width:650px){.dkn-menu-section{padding-top:16px}.dkn-section-heading{padding-bottom:16px}}

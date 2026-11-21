@@ -8,3 +8,6 @@
 /* WARM SPICE & HERITAGE */
 :root{--burgundy:#561B2A;--gold:#D99A28;--cream:#FFF8EC}
 body{background:#FFF8EC}
+
+/* DEHLI KAMAL CHECKOUT THEME */
+body{background:#FFF8EC;color:#561B2A}.top{background:#fff9f0;border-bottom-color:#ead7b5}.brand,.back,.eyebrow,footer strong,.item-price{color:#561B2A}.mark{background:#561B2A;color:#D99A28}.panel{background:#fffdf8;border-color:#ead7b5}.place{background:#561B2A;color:#fff}.place:hover{background:#3E1020}.grand strong,.continue{color:#a16a0e}.mode,.payment-choice{background:#fff3dc;border-color:#D99A28;color:#561B2A}.totals{background:#fff8ec;border-color:#ead7b5}

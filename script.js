@@ -10,165 +10,165 @@ document.addEventListener("DOMContentLoaded", () => {
           "category": "nihari",
           "name": "Single Nihari",
           "price": 750,
-          "description": "Freshly prepared Pakistani cuisine.",
-          "badge": "MENU"
+          "description": "Prepared fresh with traditional flavours.",
+          "badge": "DEHLI KAMAL"
       },
       {
           "id": 2,
           "category": "nihari",
           "name": "Single Nali Nihari",
           "price": 1120,
-          "description": "Freshly prepared Pakistani cuisine.",
-          "badge": "MENU"
+          "description": "Prepared fresh with traditional flavours.",
+          "badge": "DEHLI KAMAL"
       },
       {
           "id": 3,
           "category": "nihari",
           "name": "Double Nali Nihari",
           "price": 2240,
-          "description": "Freshly prepared Pakistani cuisine.",
-          "badge": "MENU"
+          "description": "Prepared fresh with traditional flavours.",
+          "badge": "DEHLI KAMAL"
       },
       {
           "id": 4,
           "category": "nihari",
           "name": "Maghaz Nihari",
           "price": 1080,
-          "description": "Freshly prepared Pakistani cuisine.",
-          "badge": "MENU"
+          "description": "Prepared fresh with traditional flavours.",
+          "badge": "DEHLI KAMAL"
       },
       {
           "id": 5,
           "category": "nihari",
           "name": "Single Special Nihari",
           "price": 1570,
-          "description": "Freshly prepared Pakistani cuisine.",
-          "badge": "MENU"
+          "description": "Prepared fresh with traditional flavours.",
+          "badge": "DEHLI KAMAL"
       },
       {
           "id": 6,
           "category": "biryani-pulao",
           "name": "Chicken Biryani",
           "price": 315,
-          "description": "Freshly prepared Pakistani cuisine.",
-          "badge": "MENU"
+          "description": "Prepared fresh with traditional flavours.",
+          "badge": "DEHLI KAMAL"
       },
       {
           "id": 7,
-          "category": "biryani-pulao",
+          "category": "paye",
           "name": "Paye",
           "price": 630,
-          "description": "Freshly prepared Pakistani cuisine.",
-          "badge": "MENU"
+          "description": "Prepared fresh with traditional flavours.",
+          "badge": "DEHLI KAMAL"
       },
       {
           "id": 8,
-          "category": "biryani-pulao",
+          "category": "haleem",
           "name": "Beef Haleem",
           "price": 252,
-          "description": "Freshly prepared Pakistani cuisine.",
-          "badge": "MENU"
+          "description": "Prepared fresh with traditional flavours.",
+          "badge": "DEHLI KAMAL"
       },
       {
           "id": 9,
-          "category": "biryani-pulao",
+          "category": "karahi-qorma",
           "name": "Chicken Karahi",
           "price": 360,
-          "description": "Freshly prepared Pakistani cuisine.",
-          "badge": "MENU"
+          "description": "Prepared fresh with traditional flavours.",
+          "badge": "DEHLI KAMAL"
       },
       {
           "id": 10,
-          "category": "biryani-pulao",
+          "category": "karahi-qorma",
           "name": "Beef Qorma",
           "price": 360,
-          "description": "Freshly prepared Pakistani cuisine.",
-          "badge": "MENU"
+          "description": "Prepared fresh with traditional flavours.",
+          "badge": "DEHLI KAMAL"
       },
       {
           "id": 11,
-          "category": "biryani-pulao",
+          "category": "desi-sides",
           "name": "Murgh Chanaa",
           "price": 360,
-          "description": "Freshly prepared Pakistani cuisine.",
-          "badge": "MENU"
+          "description": "Prepared fresh with traditional flavours.",
+          "badge": "DEHLI KAMAL"
       },
       {
           "id": 12,
-          "category": "biryani-pulao",
+          "category": "desi-sides",
           "name": "Saada Chana",
           "price": 216,
-          "description": "Freshly prepared Pakistani cuisine.",
-          "badge": "MENU"
+          "description": "Prepared fresh with traditional flavours.",
+          "badge": "DEHLI KAMAL"
       },
       {
           "id": 13,
-          "category": "biryani-pulao",
+          "category": "desi-sides",
           "name": "Daal",
           "price": 216,
-          "description": "Freshly prepared Pakistani cuisine.",
-          "badge": "MENU"
+          "description": "Prepared fresh with traditional flavours.",
+          "badge": "DEHLI KAMAL"
       },
       {
           "id": 14,
-          "category": "biryani-pulao",
+          "category": "desi-sides",
           "name": "Sabzi",
           "price": 216,
-          "description": "Freshly prepared Pakistani cuisine.",
-          "badge": "MENU"
+          "description": "Prepared fresh with traditional flavours.",
+          "badge": "DEHLI KAMAL"
       },
       {
           "id": 15,
-          "category": "biryani-pulao",
+          "category": "desi-sides",
           "name": "Curry Pakora",
           "price": 198,
-          "description": "Freshly prepared Pakistani cuisine.",
-          "badge": "MENU"
+          "description": "Prepared fresh with traditional flavours.",
+          "badge": "DEHLI KAMAL"
       },
       {
           "id": 16,
           "category": "breakfast",
           "name": "Sheermal",
           "price": 120,
-          "description": "Freshly prepared Pakistani cuisine.",
-          "badge": "MENU"
+          "description": "Prepared fresh with traditional flavours.",
+          "badge": "DEHLI KAMAL"
       },
       {
           "id": 17,
           "category": "breakfast",
           "name": "Taftan",
           "price": 108,
-          "description": "Freshly prepared Pakistani cuisine.",
-          "badge": "MENU"
+          "description": "Prepared fresh with traditional flavours.",
+          "badge": "DEHLI KAMAL"
       },
       {
           "id": 18,
           "category": "breakfast",
           "name": "Kulcha",
           "price": 90,
-          "description": "Freshly prepared Pakistani cuisine.",
-          "badge": "MENU"
+          "description": "Prepared fresh with traditional flavours.",
+          "badge": "DEHLI KAMAL"
       },
       {
           "id": 19,
           "category": "breakfast",
           "name": "Tandoori Roti",
           "price": 37,
-          "description": "Freshly prepared Pakistani cuisine.",
-          "badge": "MENU"
+          "description": "Prepared fresh with traditional flavours.",
+          "badge": "DEHLI KAMAL"
       },
       {
           "id": 20,
           "category": "breakfast",
           "name": "Farmaishi Chapati",
           "price": 22,
-          "description": "Freshly prepared Pakistani cuisine.",
-          "badge": "MENU"
+          "description": "Prepared fresh with traditional flavours.",
+          "badge": "DEHLI KAMAL"
       }
   ];
   
     // Food photography is pending verified commercially usable image sources.
-    const foodImages = {};
+    const foodImages = {"nihari": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1600&q=85", "biryani-pulao": "https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=850&q=80", "paye": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=1600&q=85", "haleem": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1600&q=85", "karahi-qorma": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=1600&q=85", "desi-sides": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=850&q=80", "breakfast": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=850&q=80"};
   
     const cart = new Map();
     function getOrderPreference() {
@@ -244,7 +244,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const renderCards = (items) => items.map((item) => `
         <article class="food-card">
           <div class="food-image">
-            <div class="food-photo-pending" aria-hidden="true">✦</div>
+            <img class="dkn-food-img" src="${foodImages[item.category]}" alt="Food photography illustrating ${item.name}" loading="lazy" onerror="this.style.display='none'">
             <span class="food-badge">${item.badge}</span>
           </div>
   
@@ -267,6 +267,10 @@ document.addEventListener("DOMContentLoaded", () => {
       `).join("");
       menuGrid.innerHTML = renderCards(menu.filter(item => item.category === "nihari"));
       if (riceMenuGrid) riceMenuGrid.innerHTML = renderCards(menu.filter(item => item.category === "biryani-pulao"));
+      for (const [cat, gridId] of [["paye","payeMenuGrid"],["haleem","haleemMenuGrid"],["karahi-qorma","karahiMenuGrid"],["desi-sides","sidesMenuGrid"]]) {
+        const grid = document.getElementById(gridId);
+        if (grid) grid.innerHTML = renderCards(menu.filter(item => item.category === cat));
+      }
       if (breakfastMenuGrid) breakfastMenuGrid.innerHTML = renderCards(menu.filter(item => item.category === "breakfast"));
     }
   
