@@ -1,0 +1,3086 @@
+
+/* ==========================================
+   SHANZEH NIHARI — PREMIUM RESTAURANT DESIGN
+   ========================================== */
+
+   :root {
+    --burgundy: #4b1020;
+    --deep: #240b13;
+    --red: #d72832;
+    --red-hover: #b91b27;
+    --gold: #f2c675;
+    --cream: #fff4e4;
+    --muted: #cdb7b2;
+    --panel: #35121d;
+    --border: rgba(242, 198, 117, 0.2);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 105px;
+  }
+  
+  body {
+    background: var(--deep);
+    color: var(--cream);
+    font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
+  }
+  
+  body.no-scroll {
+    overflow: hidden;
+  }
+  
+  button, input, textarea {
+    font: inherit;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+  }
+  
+  ::selection {
+    background: var(--gold);
+    color: var(--deep);
+  }
+  
+  /* TOP ANNOUNCEMENT */
+  
+  .announcement {
+    min-height: 35px;
+    padding: 9px 16px;
+    background: linear-gradient(90deg, #c31e2a, #e33836, #bd1827);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+  }
+  
+  .announcement-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--gold);
+    box-shadow: 0 0 12px var(--gold);
+    animation: pulse 2s infinite;
+  }
+  
+  .announcement-separator {
+    color: var(--gold);
+  }
+  
+  /* NAVIGATION */
+  
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(35, 9, 17, 0.94);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  
+  .nav-container {
+    max-width: 1440px;
+    min-height: 88px;
+    padding: 12px 5%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+  }
+  
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+  
+  .brand-icon {
+    width: 49px;
+    height: 49px;
+    display: grid;
+    place-items: center;
+    background: var(--red);
+    border: 1px solid #f5b55d;
+    border-radius: 12px;
+    color: white;
+    font-family: "Outfit", sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+    box-shadow: 0 6px 22px #d7283238;
+  }
+  
+  .brand-icon span {
+    color: var(--gold);
+  }
+  
+  .brand-name {
+    display: flex;
+    flex-direction: column;
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: 1px;
+  }
+  
+  .brand-name strong {
+    color: var(--gold);
+    font-size: 20px;
+  }
+  
+  .desktop-nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .desktop-nav a {
+    position: relative;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+    transition: color .25s;
+  }
+  
+  .desktop-nav a:hover,
+  .desktop-nav a.active {
+    color: var(--gold);
+  }
+  
+  .desktop-nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -9px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: var(--gold);
+    transition: width .3s;
+  }
+  
+  .desktop-nav a:hover::after,
+  .desktop-nav a.active::after {
+    width: 100%;
+  }
+  
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .cart-trigger {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    color: var(--cream);
+    font-weight: 800;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+  
+  .cart-symbol {
+    font-size: 20px;
+  }
+  
+  .cart-count {
+    background: var(--gold);
+    color: var(--deep);
+    border-radius: 50px;
+    min-width: 21px;
+    height: 21px;
+    padding: 3px;
+    display: grid;
+    place-items: center;
+    font-size: 11px;
+  }
+  
+  .nav-order {
+    padding: 15px 19px;
+    background: var(--red);
+    color: white;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .6px;
+    white-space: nowrap;
+    transition: background .3s, transform .3s;
+  }
+  
+  .nav-order:hover {
+    background: var(--red-hover);
+    transform: translateY(-2px);
+  }
+  
+  .nav-order span {
+    margin-left: 8px;
+  }
+  
+  /* HERO */
+  
+  .hero {
+    position: relative;
+    isolation: isolate;
+    min-height: 760px;
+    overflow: hidden;
+    background:
+      radial-gradient(ellipse at 80% 45%, #8a273b 0%, transparent 45%),
+      radial-gradient(ellipse at 12% 100%, #681626 0%, transparent 50%),
+      linear-gradient(125deg, #250a13, #4b1020 55%, #260911);
+  }
+  
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: .12;
+    background-image:
+      linear-gradient(#f2c67530 1px, transparent 1px),
+      linear-gradient(90deg, #f2c67530 1px, transparent 1px);
+    background-size: 65px 65px;
+    mask-image: linear-gradient(to right, transparent, black);
+  }
+  
+  .hero-glow {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(70px);
+  }
+  
+  .hero-glow-one {
+    width: 350px;
+    height: 350px;
+    right: 5%;
+    top: 10%;
+    background: #e22a3540;
+    animation: glowMove 8s ease-in-out infinite alternate;
+  }
+  
+  .hero-glow-two {
+    width: 280px;
+    height: 280px;
+    left: -100px;
+    bottom: -100px;
+    background: #e2a64625;
+  }
+  
+  .hero-inner {
+    max-width: 1440px;
+    min-height: 720px;
+    margin: auto;
+    padding: 80px 5% 110px;
+    display: grid;
+    grid-template-columns: 1.08fr .92fr;
+    align-items: center;
+    gap: 45px;
+  }
+  
+  .hero-copy {
+    position: relative;
+    z-index: 2;
+    animation: slideIn .9s ease both;
+  }
+  
+  .hero-eyebrow,
+  .section-kicker {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+  }
+  
+  .hero-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+  }
+  
+  .eyebrow-line {
+    width: 35px;
+    height: 2px;
+    background: var(--gold);
+  }
+  
+  .hero h1 {
+    font-family: "Outfit", sans-serif;
+    font-size: clamp(54px, 6.4vw, 100px);
+    font-weight: 900;
+    line-height: .98;
+    letter-spacing: -3.5px;
+    text-transform: uppercase;
+    text-shadow: 0 6px 35px #16050a70;
+  }
+  
+  .hero-title-gold {
+    display: block;
+    margin-top: 10px;
+    color: var(--gold);
+  }
+  
+  .title-period {
+    color: var(--red);
+  }
+  
+  .hero-subtitle {
+    max-width: 510px;
+    margin-top: 28px;
+    color: #ead7d0;
+    font-size: 17px;
+    line-height: 1.85;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 35px;
+  }
+  
+  .primary-button,
+  .secondary-button {
+    min-height: 56px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    padding: 17px 25px;
+    border-radius: 9px;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .8px;
+    transition: transform .3s, box-shadow .3s, background .3s;
+  }
+  
+  .primary-button {
+    background: linear-gradient(135deg, #e3333d, #bb1626);
+    color: white;
+    box-shadow: 0 12px 30px #b8142645;
+  }
+  
+  .primary-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px #e3333d65;
+  }
+  
+  .secondary-button {
+    border: 1px solid #f2c67580;
+    color: var(--gold);
+    background: #ffffff05;
+  }
+  
+  .secondary-button:hover {
+    background: #f2c67515;
+    transform: translateY(-4px);
+  }
+  
+  .hero-features {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+    margin-top: 55px;
+  }
+  
+  .hero-feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ead8d0;
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 1.6;
+    letter-spacing: .6px;
+  }
+  
+  .feature-symbol {
+    font-size: 22px;
+    color: var(--gold);
+  }
+  
+  .feature-divider {
+    width: 1px;
+    height: 30px;
+    background: var(--border);
+  }
+  
+  /* HERO FOOD IMAGE */
+  
+  .hero-visual {
+    position: relative;
+    min-width: 0;
+    display: grid;
+    place-items: center;
+    animation: imageAppear 1.2s ease both;
+  }
+  
+  .hero-image-ring {
+    position: absolute;
+    width: 110%;
+    aspect-ratio: 1;
+    border: 1px solid #f2c67535;
+    border-radius: 50%;
+    box-shadow:
+      0 0 0 35px #f2c67508,
+      0 0 0 75px #f2c67505;
+    animation: ringBreath 6s ease-in-out infinite;
+  }
+  
+  .hero-image-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    aspect-ratio: 1;
+    padding: 12px;
+    border: 2px solid #f2c67590;
+    border-radius: 50%;
+    background: #3b1019;
+    box-shadow: 0 35px 90px #16040d90;
+    animation: floatFood 6s ease-in-out infinite;
+  }
+  
+  .hero-food-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+  }
+  
+  .floating-stamp {
+    position: absolute;
+    right: -10px;
+    bottom: 9%;
+    width: 125px;
+    height: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background: var(--gold);
+    color: #4b1020;
+    border: 5px solid #4b1020;
+    outline: 2px solid var(--gold);
+    border-radius: 50%;
+    transform: rotate(12deg);
+    box-shadow: 0 15px 40px #0005;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 800;
+  }
+  
+  .floating-stamp strong {
+    font-family: "Outfit", sans-serif;
+    font-size: 17px;
+    font-weight: 900;
+  }
+  
+  .hero-decoration {
+    position: absolute;
+    top: -25px;
+    right: 10%;
+    font-size: 80px;
+    color: #f2c67560;
+    animation: spinSlow 25s linear infinite;
+  }
+  
+  .hero-bottom {
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    bottom: 27px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #ead5c5;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+  }
+  
+  .scroll-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, #f2c67580, transparent);
+  }
+  
+  /* PROMISE STRIP */
+  
+  .promise-strip {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px 25px;
+    padding: 23px 5%;
+    background: var(--gold);
+    color: #481320;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1.4px;
+  }
+  
+  /* MENU */
+  
+  .menu-section {
+    padding: 110px 5% 125px;
+    background:
+      radial-gradient(ellipse at 50% 0%, #5d192745, transparent 60%),
+      #fff4e4;
+    color: #35111a;
+  }
+  
+  .section-heading {
+    max-width: 780px;
+    margin: 0 auto 60px;
+    text-align: center;
+  }
+  
+  .menu-section .section-kicker {
+    color: #c12431;
+  }
+  
+  .section-heading h2 {
+    margin: 17px 0;
+    font-family: "Outfit", sans-serif;
+    font-size: clamp(37px, 5vw, 65px);
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -2px;
+  }
+  
+  .section-heading h2 em {
+    color: #c12431;
+    font-style: normal;
+  }
+  
+  .section-heading p {
+    color: #7d6062;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  
+  .menu-grid {
+    max-width: 1370px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+  }
+  
+  .food-card {
+    background: #fffdf8;
+    border: 1px solid #ead7c7;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px #4015220b;
+    transition: transform .35s, box-shadow .35s;
+  }
+  
+  .food-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 24px 50px #40152225;
+  }
+  
+  .food-image {
+    position: relative;
+    height: 210px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #6b2432, #260c15);
+  }
+  
+  .food-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .6s;
+  }
+  
+  .food-card:hover .food-image img {
+    transform: scale(1.09);
+  }
+  
+  .food-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 8px 11px;
+    background: #fff4e4;
+    color: #8e1524;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .5px;
+  }
+  
+  .food-info {
+    padding: 23px;
+  }
+  
+  .food-info h3 {
+    margin-bottom: 9px;
+    color: #38101b;
+    font-family: "Outfit", sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+  }
+  
+  .food-info p {
+    min-height: 43px;
+    color: #80676a;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+  
+  .food-bottom {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  
+  .price {
+    color: #ad1b2a;
+    font-family: "Outfit", sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+  }
+  
+  .add-btn {
+    padding: 12px 15px;
+    background: #c51e2c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 800;
+    transition: background .25s, transform .25s;
+  }
+  
+  .add-btn:hover {
+    background: #951522;
+    transform: translateY(-2px);
+  }
+  
+  /* STORY */
+  
+  .story-section {
+    padding: 120px 5%;
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 85% 25%, #8e2d3a50, transparent 45%),
+      linear-gradient(130deg, #300d19, #571525, #2b0b15);
+    text-align: center;
+  }
+  
+  .story-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+    margin: auto;
+  }
+  
+  .story-decoration {
+    color: var(--gold);
+    font-size: 55px;
+    margin-bottom: 22px;
+  }
+  
+  .story-section h2 {
+    margin: 22px 0;
+    font-family: "Outfit", sans-serif;
+    font-size: clamp(36px, 5vw, 66px);
+    font-weight: 900;
+    line-height: 1.12;
+    letter-spacing: -2px;
+  }
+  
+  .story-section h2 em {
+    color: var(--gold);
+    font-style: normal;
+  }
+  
+  .story-section p {
+    max-width: 600px;
+    margin: 0 auto 35px;
+    color: #ead0ca;
+    font-size: 16px;
+    line-height: 1.9;
+  }
+  
+  /* DELIVERY CTA */
+  
+  .delivery-section {
+    padding: 75px 5%;
+    background: var(--gold);
+    color: #42101d;
+  }
+  
+  .delivery-inner {
+    max-width: 1350px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+  }
+  
+  .delivery-section .section-kicker {
+    color: #a01b29;
+  }
+  
+  .delivery-section h2 {
+    margin: 13px 0;
+    font-family: "Outfit", sans-serif;
+    font-size: clamp(30px, 3.6vw, 48px);
+    font-weight: 900;
+    line-height: 1.1;
+  }
+  
+  .delivery-section p {
+    color: #694b3b;
+  }
+  
+  /* FOOTER */
+  
+  .footer {
+    padding: 65px 5% 25px;
+    background: #1d0810;
+  }
+  
+  .footer-top,
+  .footer-bottom {
+    max-width: 1350px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+  }
+  
+  .footer-brand .brand-name {
+    font-size: 26px;
+  }
+  
+  .footer-brand .brand-name strong {
+    font-size: 28px;
+  }
+  
+  .footer-brand p {
+    margin-top: 17px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  
+  .footer-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    font-size: 12px;
+    font-weight: 800;
+  }
+  
+  .footer-links a:hover {
+    color: var(--gold);
+  }
+  
+  .footer-bottom {
+    margin-top: 55px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: #b99b98;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  
+  /* CART OVERLAY */
+  
+  .cart-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 199;
+    background: #12060ac0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility .3s;
+  }
+  
+  .cart-overlay.open {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .cart-drawer {
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    right: 0;
+    width: min(460px, 100%);
+    height: 100dvh;
+    background: #fff8ed;
+    color: #37111c;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(105%);
+    transition: transform .4s cubic-bezier(.2,.8,.2,1);
+    box-shadow: -20px 0 70px #0005;
+  }
+  
+  .cart-drawer.open {
+    transform: translateX(0);
+  }
+  
+  .cart-header {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #ead8cc;
+  }
+  
+  .cart-header .section-kicker {
+    color: #b51d2b;
+  }
+  
+  .cart-header h2 {
+    margin-top: 7px;
+    font-family: "Outfit", sans-serif;
+    font-size: 30px;
+  }
+  
+  .close-cart,
+  .checkout-close {
+    width: 38px;
+    height: 38px;
+    background: #f0dfd5;
+    border: none;
+    border-radius: 50%;
+    color: #501522;
+    font-size: 17px;
+  }
+  
+  .cart-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 25px;
+  }
+  
+  .empty-cart {
+    margin-top: 60px;
+    text-align: center;
+    color: #94777b;
+  }
+  
+  .cart-item {
+    padding: 17px 0;
+    border-bottom: 1px solid #e8d4ca;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .cart-item h3 {
+    margin-bottom: 7px;
+    font-size: 15px;
+  }
+  
+  .cart-item-price {
+    color: #ae1c2a;
+    font-weight: 800;
+  }
+  
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .quantity-controls button {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #e2c7bd;
+    border-radius: 6px;
+    background: white;
+    color: #681728;
+    font-weight: 900;
+  }
+  
+  .cart-footer {
+    padding: 25px 30px;
+    border-top: 1px solid #ead8cc;
+  }
+  
+  .cart-total-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 800;
+  }
+  
+  .delivery-note {
+    margin: 12px 0 20px;
+    color: #8d6c71;
+    font-size: 12px;
+  }
+  
+  .checkout-button {
+    width: 100%;
+    padding: 18px 20px;
+    border: none;
+    border-radius: 9px;
+    background: linear-gradient(135deg, #df2d38, #b51b2a);
+    color: white;
+    font-weight: 900;
+    font-size: 13px;
+    letter-spacing: .7px;
+    transition: transform .25s, box-shadow .25s;
+  }
+  
+  .checkout-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px #c7223040;
+  }
+  
+  /* CHECKOUT MODAL */
+  
+  .checkout-overlay {
+    position: fixed;
+    z-index: 300;
+    inset: 0;
+    padding: 20px;
+    background: #12060ad9;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .checkout-overlay.open {
+    display: flex;
+  }
+  
+  .checkout-modal {
+    position: relative;
+    width: min(540px, 100%);
+    max-height: 92dvh;
+    overflow-y: auto;
+    padding: 35px;
+    border-radius: 18px;
+    background: #fff8ed;
+    color: #37111c;
+    box-shadow: 0 30px 100px #0007;
+    animation: modalAppear .3s ease;
+  }
+  
+  .checkout-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .checkout-modal .section-kicker {
+    color: #b51d2b;
+  }
+  
+  .checkout-modal h2 {
+    margin: 12px 0 25px;
+    font-family: "Outfit", sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+  }
+  
+  #checkoutForm {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #checkoutForm label {
+    margin-bottom: 8px;
+    color: #54202b;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
+  
+  #checkoutForm input,
+  #checkoutForm textarea {
+    width: 100%;
+    margin-bottom: 18px;
+    padding: 13px 14px;
+    border: 1px solid #dfc9bd;
+    border-radius: 8px;
+    background: white;
+    color: #36101b;
+    font-size: 14px;
+    resize: vertical;
+  }
+  
+  .checkout-summary {
+    margin: 5px 0 22px;
+    padding: 18px;
+    background: #f2e5d8;
+    border-radius: 10px;
+  }
+  
+  .checkout-summary > div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+  
+  .checkout-summary .grand-total {
+    padding-top: 13px;
+    margin: 0;
+    border-top: 1px solid #d8bdb0;
+    color: #a31929;
+    font-size: 19px;
+    font-weight: 900;
+  }
+  
+  .checkout-disclaimer {
+    margin-top: 13px;
+    color: #8a6267;
+    text-align: center;
+    font-size: 11px;
+    line-height: 1.6;
+  }
+  
+  /* SCROLL REVEAL */
+  
+  .reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity .7s ease, transform .7s ease;
+  }
+  
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* KEYFRAME ANIMATIONS */
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(45px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes imageAppear {
+    from {
+      opacity: 0;
+      transform: scale(.85) rotate(-8deg);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) rotate(0);
+    }
+  }
+  
+  @keyframes floatFood {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-18px); }
+  }
+  
+  @keyframes ringBreath {
+    0%, 100% { transform: scale(1); opacity: .7; }
+    50% { transform: scale(1.05); opacity: 1; }
+  }
+  
+  @keyframes glowMove {
+    from { transform: translate(0, 0); }
+    to { transform: translate(-60px, 45px); }
+  }
+  
+  @keyframes spinSlow {
+    to { transform: rotate(360deg); }
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .3; }
+  }
+  
+  @keyframes modalAppear {
+    from {
+      opacity: 0;
+      transform: translateY(20px) scale(.97);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  /* RESPONSIVE DESIGN */
+  
+  @media (max-width: 1200px) {
+    .desktop-nav {
+      gap: 18px;
+    }
+  
+    .hero h1 {
+      font-size: clamp(48px, 6vw, 75px);
+    }
+  
+    .menu-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  
+  @media (max-width: 950px) {
+    .desktop-nav {
+      display: none;
+    }
+  
+    .hero-inner {
+      grid-template-columns: 1fr;
+      padding-top: 80px;
+      gap: 70px;
+      text-align: center;
+    }
+  
+    .hero-eyebrow,
+    .hero-buttons,
+    .hero-features {
+      justify-content: center;
+    }
+  
+    .hero-subtitle {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .hero-visual {
+      max-width: 530px;
+      margin: auto;
+      width: 85%;
+    }
+  
+    .hero-bottom {
+      display: none;
+    }
+  
+    .menu-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .announcement {
+      font-size: 8px;
+      letter-spacing: .8px;
+      gap: 7px;
+    }
+  
+    .nav-container {
+      min-height: 75px;
+      padding: 10px 4%;
+    }
+  
+    .brand-icon {
+      width: 40px;
+      height: 40px;
+      font-size: 17px;
+    }
+  
+    .brand-name {
+      font-size: 13px;
+    }
+  
+    .brand-name strong {
+      font-size: 15px;
+    }
+  
+    .cart-label,
+    .nav-order {
+      display: none;
+    }
+  
+    .cart-trigger {
+      padding: 9px;
+    }
+  
+    .hero-inner {
+      padding: 65px 6% 80px;
+      gap: 60px;
+    }
+  
+    .hero h1 {
+      font-size: clamp(43px, 11vw, 64px);
+      letter-spacing: -2px;
+    }
+  
+    .hero-eyebrow {
+      font-size: 9px;
+      letter-spacing: 1.5px;
+    }
+  
+    .hero-subtitle {
+      font-size: 15px;
+    }
+  
+    .hero-buttons {
+      flex-direction: column;
+    }
+  
+    .primary-button,
+    .secondary-button {
+      width: 100%;
+    }
+  
+    .hero-features {
+      gap: 10px;
+      margin-top: 35px;
+    }
+  
+    .hero-feature {
+      font-size: 8px;
+      gap: 5px;
+    }
+  
+    .feature-symbol {
+      font-size: 15px;
+    }
+  
+    .hero-visual {
+      width: 90%;
+    }
+  
+    .floating-stamp {
+      width: 92px;
+      height: 92px;
+      font-size: 8px;
+      right: -8px;
+    }
+  
+    .floating-stamp strong {
+      font-size: 12px;
+    }
+  
+    .hero-decoration {
+      font-size: 50px;
+    }
+  
+    .promise-strip {
+      font-size: 9px;
+      padding: 19px 5%;
+    }
+  
+    .menu-section {
+      padding: 75px 5%;
+    }
+  
+    .section-heading {
+      margin-bottom: 35px;
+    }
+  
+    .menu-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  
+    .food-image {
+      height: 235px;
+    }
+  
+    .story-section {
+      padding: 85px 6%;
+    }
+  
+    .delivery-section {
+      padding: 65px 6%;
+    }
+  
+    .delivery-inner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .footer-top,
+    .footer-bottom {
+      flex-direction: column;
+    }
+  
+    .footer-links {
+      gap: 17px;
+    }
+  
+    .checkout-modal {
+      padding: 25px 20px;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: .01ms !important;
+      transition-duration: .01ms !important;
+      scroll-behavior: auto !important;
+    }
+  
+    .reveal {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  
+/* SHANZEH NIHARI — RED YELLOW WHITE BRAND */
+
+:root {
+  --burgundy: #d71920;
+  --deep: #ffffff;
+  --red: #d71920;
+  --red-hover: #b51219;
+  --gold: #ffda00;
+  --cream: #ffffff;
+  --muted: #666666;
+  --panel: #ffffff;
+  --border: rgba(0, 0, 0, .12);
+}
+
+body {
+  background: #ffffff;
+  color: #202020;
+}
+
+.site-header {
+  background: #ffffff;
+  border-bottom: 3px solid #ffda00;
+}
+
+.brand-name,
+.desktop-nav a,
+.cart-trigger {
+  color: #202020;
+}
+
+.brand-name strong,
+.desktop-nav a:hover,
+.desktop-nav a.active {
+  color: #d71920;
+}
+
+.brand-icon,
+.nav-order,
+.add-btn {
+  background: #d71920;
+  color: #ffffff;
+}
+
+.announcement {
+  background: #d71920;
+  color: #ffffff;
+}
+
+.announcement-dot,
+.announcement-separator {
+  color: #ffda00;
+}
+
+.hero {
+  background:
+    radial-gradient(
+      circle at 80% 50%,
+      rgba(255, 218, 0, .16),
+      transparent 48%
+    ),
+    linear-gradient(120deg, #fffdf3, #ffffff);
+  color: #202020;
+}
+
+.hero::before {
+  opacity: .04;
+}
+
+.hero h1 {
+  color: #202020;
+  text-shadow: none;
+}
+
+.hero-title-gold,
+.hero-eyebrow,
+.feature-symbol {
+  color: #d71920;
+}
+
+.title-period {
+  color: #ffbd00;
+}
+
+.hero-subtitle,
+.hero-feature,
+.hero-bottom {
+  color: #494949;
+}
+
+.eyebrow-line,
+.scroll-line {
+  background: #d71920;
+}
+
+.hero-glow-one {
+  background: rgba(255, 218, 0, .18);
+}
+
+.hero-glow-two {
+  background: rgba(215, 25, 32, .08);
+}
+
+.hero-image-ring {
+  border-color: #ffda00;
+  box-shadow:
+    0 0 0 35px rgba(255, 218, 0, .08),
+    0 0 0 75px rgba(255, 218, 0, .04);
+}
+
+.hero-image-wrap {
+  background: #ffffff;
+  border-color: #ffda00;
+  box-shadow: 0 25px 65px rgba(0, 0, 0, .13);
+}
+
+.hero-decoration {
+  color: #ffda00;
+}
+
+.primary-button,
+.checkout-button {
+  background: #d71920;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(215, 25, 32, .18);
+}
+
+.secondary-button {
+  background: #ffffff;
+  border-color: #d71920;
+  color: #d71920;
+}
+
+.secondary-button:hover {
+  background: #fff2f2;
+}
+
+.promise-strip {
+  background: #ffda00;
+  color: #202020;
+}
+
+.menu-section {
+  background: #ffffff;
+  color: #202020;
+}
+
+.menu-section .section-kicker,
+.section-heading h2 em,
+.price {
+  color: #d71920;
+}
+
+.section-heading p,
+.food-info p {
+  color: #666666;
+}
+
+.food-card {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
+}
+
+.food-card:hover {
+  box-shadow: 0 22px 45px rgba(215, 25, 32, .12);
+}
+
+.food-image {
+  background: #fff2d2;
+}
+
+.food-info h3 {
+  color: #202020;
+}
+
+.food-badge {
+  background: #ffda00;
+  color: #202020;
+}
+
+.story-section {
+  background: #d71920;
+  color: #ffffff;
+}
+
+.story-section .section-kicker,
+.story-section h2 em,
+.story-decoration {
+  color: #ffda00;
+}
+
+.story-section p {
+  color: #ffffff;
+}
+
+.story-section .primary-button {
+  background: #ffda00;
+  color: #202020;
+  box-shadow: none;
+}
+
+.delivery-section {
+  background: #ffda00;
+  color: #202020;
+}
+
+.delivery-section .section-kicker {
+  color: #d71920;
+}
+
+.delivery-section p {
+  color: #444444;
+}
+
+.footer {
+  background: #ffffff;
+  color: #202020;
+  border-top: 5px solid #d71920;
+}
+
+.footer-brand .brand-name,
+.footer-links a {
+  color: #202020;
+}
+
+.footer-brand .brand-name strong,
+.footer-links a:hover {
+  color: #d71920;
+}
+
+.footer-brand p,
+.footer-bottom {
+  color: #666666;
+}
+
+.cart-drawer,
+.checkout-modal {
+  background: #ffffff;
+  color: #202020;
+}
+
+.cart-header .section-kicker,
+.checkout-modal .section-kicker {
+  color: #d71920;
+}
+
+.cart-item-price,
+.checkout-summary .grand-total {
+  color: #d71920;
+}
+
+/* ==========================================
+   SHANZEH NIHARI — PREMIUM DESIGN REFINEMENT
+   RED + YELLOW + WHITE
+   ========================================== */
+
+/* 1. PREMIUM HERO BACKGROUND */
+
+.hero {
+  background:
+    radial-gradient(
+      ellipse at 82% 45%,
+      rgba(255, 218, 0, 0.14),
+      transparent 48%
+    ),
+    linear-gradient(
+      115deg,
+      #8f1017 0%,
+      #c71923 48%,
+      #a7131b 100%
+    );
+  color: #ffffff;
+}
+
+.hero::before {
+  opacity: 0.08;
+}
+
+/* 2. FIX BIG HEADING READABILITY */
+
+.hero h1 {
+  color: #ffffff;
+  font-size: clamp(46px, 5.8vw, 86px);
+  line-height: 1.17;
+  letter-spacing: -1.5px;
+  text-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+.hero-title-gold {
+  color: #ffda00;
+  margin-top: 14px;
+  line-height: 1.2;
+}
+
+.title-period {
+  color: #ffffff;
+}
+
+.hero-eyebrow {
+  color: #ffda00;
+  line-height: 1.7;
+}
+
+.eyebrow-line {
+  background: #ffda00;
+}
+
+.hero-subtitle {
+  color: #ffffff;
+  font-size: 17px;
+  line-height: 1.95;
+  max-width: 520px;
+  margin-top: 30px;
+}
+
+.hero-feature,
+.hero-bottom {
+  color: #ffffff;
+  line-height: 1.8;
+}
+
+.feature-symbol {
+  color: #ffda00;
+}
+
+/* 3. HERO BUTTONS */
+
+.hero .primary-button {
+  background: #ffda00;
+  color: #202020;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
+}
+
+.hero .primary-button:hover {
+  background: #ffe53d;
+}
+
+.hero .secondary-button {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.hero .secondary-button:hover {
+  background: rgba(255, 255, 255, 0.13);
+}
+
+/* 4. SMOOTH PLATE ROTATION */
+
+.hero-image-wrap {
+  animation: plateRotate 90s linear infinite;
+  will-change: transform;
+}
+
+@keyframes plateRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Remove shaking / pulsing rings */
+
+.hero-image-ring {
+  animation: none;
+}
+
+.hero-decoration {
+  animation: none;
+}
+
+.hero-glow-one,
+.hero-glow-two {
+  animation: none;
+}
+
+/* 5. SECTION HEADINGS */
+
+.section-heading h2 {
+  font-size: clamp(36px, 4.5vw, 60px);
+  line-height: 1.24;
+  letter-spacing: -0.8px;
+  margin: 20px 0;
+}
+
+.section-heading p {
+  color: #555555;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.section-kicker {
+  line-height: 1.8;
+}
+
+/* 6. MENU CARD READABILITY */
+
+.food-info h3 {
+  font-size: 21px;
+  line-height: 1.45;
+  margin-bottom: 12px;
+}
+
+.food-info p {
+  color: #555555;
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.food-bottom {
+  margin-top: 25px;
+}
+
+.price {
+  font-size: 21px;
+  line-height: 1.4;
+}
+
+/* 7. STORY SECTION READABILITY */
+
+.story-section h2 {
+  font-size: clamp(36px, 4.5vw, 62px);
+  line-height: 1.3;
+  letter-spacing: -0.8px;
+  margin: 25px 0;
+}
+
+.story-section p {
+  font-size: 17px;
+  line-height: 2;
+  max-width: 680px;
+}
+
+/* 8. DELIVERY SECTION */
+
+.delivery-section h2 {
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+  margin: 18px 0;
+}
+
+.delivery-section p {
+  color: #333333;
+  line-height: 1.8;
+}
+
+/* 9. NAVIGATION CONTRAST */
+
+.site-header {
+  background: #ffffff;
+}
+
+.desktop-nav a {
+  color: #202020;
+}
+
+.desktop-nav a:hover,
+.desktop-nav a.active {
+  color: #c71923;
+}
+
+/* 10. MOBILE READABILITY */
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: clamp(40px, 10vw, 57px);
+    line-height: 1.2;
+    letter-spacing: -0.8px;
+  }
+
+  .hero-title-gold {
+    margin-top: 12px;
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  .section-heading h2,
+  .story-section h2 {
+    line-height: 1.3;
+  }
+
+  .hero-features {
+    flex-wrap: wrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-image-wrap {
+    animation: none;
+  }
+}
+
+/* SMOOTH CONTINUOUS PLATE ROTATION */
+
+.hero .hero-visual .hero-image-wrap {
+  animation: smoothPlateSpin 20s linear infinite !important;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+@keyframes smoothPlateSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Stop unwanted shaking */
+
+.hero-image-ring {
+  animation: none !important;
+}
+
+/* ==========================================
+   SHANZEH NIHARI — ORDER SELECTION POPUP
+   ========================================== */
+
+/* Blurred website background */
+
+.order-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  background: rgba(0, 0, 0, 0.52);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  overflow-y: auto;
+}
+
+.order-modal-overlay.is-hidden {
+  display: none;
+}
+
+/* Compact popup */
+
+.order-modal {
+  width: 100%;
+  max-width: 525px;
+  max-height: calc(100dvh - 36px);
+  margin: auto;
+  overflow-y: auto;
+  background: #ffffff;
+  color: #202938;
+  border-radius: 23px;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+  font-family: "DM Sans", sans-serif;
+  animation: orderModalAppear 0.35s ease both;
+}
+
+/* Yellow header */
+
+.order-modal-banner {
+  height: 108px;
+  background: #ffb900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 23px 23px 0 0;
+}
+
+.order-modal-logo {
+  width: 83px;
+  height: 83px;
+  display: grid;
+  place-items: center;
+  border-radius: 17px;
+  background: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.14);
+}
+
+.order-modal-logo span {
+  font-size: 48px;
+  line-height: 1;
+}
+
+/* Popup body */
+
+.order-modal-content {
+  padding: 17px 18px 14px;
+}
+
+.order-modal-content h2 {
+  margin: 0 0 17px;
+  color: #202938;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+/* Delivery / Pick-Up switch */
+
+.order-type-switch {
+  width: fit-content;
+  display: flex;
+  gap: 4px;
+  margin: 0 auto 14px;
+  padding: 6px;
+  background: #f1f2f4;
+  border: 1px solid #e2e5e9;
+  border-radius: 19px;
+}
+
+.order-type-btn {
+  min-width: 95px;
+  padding: 12px 20px;
+  background: transparent;
+  color: #707989;
+  border: 0;
+  border-radius: 13px;
+  font-size: 13px;
+  font-weight: 800;
+  transition: background 0.2s, color 0.2s;
+}
+
+.order-type-btn.active {
+  background: #d71920;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(215, 25, 32, 0.18);
+}
+
+/* Location description */
+
+.order-modal-help {
+  margin: 0 0 12px;
+  text-align: center;
+  color: #596477;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Current location button */
+
+.use-location-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 13px;
+  padding: 10px 16px;
+  background: #ffffff;
+  color: #d71920;
+  border: 1.5px solid #ffb900;
+  border-radius: 28px;
+  font-size: 12px;
+  font-weight: 800;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.08);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.use-location-btn:hover {
+  background: #fff8e3;
+  transform: translateY(-1px);
+}
+
+.location-status {
+  margin: 0;
+  color: #536172;
+  font-size: 12px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.location-status:not(:empty) {
+  margin-bottom: 12px;
+}
+
+/* Dropdown fields */
+
+#deliveryOptions label,
+#pickupOptions label {
+  display: block;
+  margin: 0 0 8px;
+  color: #374357;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+#deliveryArea,
+#pickupBranch {
+  display: block;
+  width: 100%;
+  min-height: 49px;
+  padding: 12px 16px;
+  border: 2px solid #e2e5ea;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #374357;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#deliveryArea:focus,
+#pickupBranch:focus {
+  border-color: #d71920;
+  outline: none;
+}
+
+/* Important: respect hidden attribute */
+
+#deliveryOptions[hidden],
+#pickupOptions[hidden] {
+  display: none !important;
+}
+
+/* Branch information */
+
+.branch-location-card {
+  margin-top: 12px;
+  padding: 16px;
+  background: #fffaf0;
+  border: 1px solid #ffdfaa;
+  border-radius: 15px;
+}
+
+.branch-location-card strong {
+  display: block;
+  margin-bottom: 7px;
+  color: #202938;
+  font-size: 13px;
+}
+
+.branch-location-card p {
+  margin: 0 0 8px;
+  color: #596477;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.branch-location-card span {
+  color: #b24a16;
+  font-size: 11px;
+}
+
+/* Bottom Select button */
+
+.order-modal-footer {
+  padding: 14px 16px 16px;
+  border-top: 1px solid #eceef1;
+  background: #ffffff;
+}
+
+.order-modal-select {
+  width: 100%;
+  min-height: 50px;
+  background: #d71920;
+  color: #ffffff;
+  border: 0;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 800;
+  box-shadow: 0 4px 9px rgba(215, 25, 32, 0.15);
+  transition: background 0.2s;
+}
+
+.order-modal-select:hover {
+  background: #b9131a;
+}
+
+/* Popup opening animation */
+
+@keyframes orderModalAppear {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Mobile responsive */
+
+@media (max-width: 600px) {
+  .order-modal-overlay {
+    padding: 12px;
+  }
+
+  .order-modal {
+    max-width: 100%;
+    max-height: calc(100dvh - 24px);
+    border-radius: 20px;
+  }
+
+  .order-modal-banner {
+    height: 95px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .order-modal-logo {
+    width: 73px;
+    height: 73px;
+  }
+
+  .order-modal-content {
+    padding: 15px 14px 12px;
+  }
+
+  .order-modal-content h2 {
+    font-size: 17px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .order-modal {
+    animation: none;
+  }
+}
+
+/* Respect hidden elements inside order popup */
+.order-modal [hidden] {
+  display: none !important;
+}
+
+/* ==========================================
+   SHANZEH NIHARI — CINEMATIC ANIMATIONS
+   ========================================== */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* One consistent scroll reveal system; JS attaches classes after cards render. */
+.cinematic-reveal {
+  opacity: 0;
+  transform: translate3d(0, 38px, 0);
+  transition: opacity 850ms cubic-bezier(.22,1,.36,1),
+              transform 850ms cubic-bezier(.22,1,.36,1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.cinematic-reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+.menu-grid .food-card.cinematic-reveal {
+  opacity: 0;
+  transform: translate3d(0, 42px, 0) scale(.975);
+  transition: opacity 850ms cubic-bezier(.22,1,.36,1),
+              transform 850ms cubic-bezier(.22,1,.36,1),
+              box-shadow 350ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.menu-grid .food-card.cinematic-reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+.menu-grid .food-card.cinematic-reveal.is-visible:hover {
+  transform: translate3d(0, -9px, 0) scale(1.01);
+  transition-delay: 0ms;
+}
+.section-heading h2::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  margin: 19px auto 0;
+  border-radius: 10px;
+  background: #ffda00;
+  transition: width 950ms ease 250ms;
+}
+.section-heading.is-visible h2::after { width: 88px; }
+
+/* Food photo hover zoom */
+.food-image {
+  overflow: hidden;
+}
+
+.food-image img {
+  transition: transform 800ms cubic-bezier(.2,.7,.2,1);
+}
+
+.food-card:hover .food-image img {
+  transform: scale(1.09);
+}
+
+/* Button microinteractions */
+.primary-button,
+.nav-order,
+.add-btn,
+.order-modal-select {
+  transition:
+    transform 300ms ease,
+    box-shadow 300ms ease,
+    background 300ms ease;
+}
+
+.primary-button:hover,
+.nav-order:hover,
+.add-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* Animated decorative background */
+.story-section {
+  position: relative;
+  isolation: isolate;
+}
+
+.story-section::before {
+  content: "";
+  position: absolute;
+  inset: -15%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      circle at 75% 35%,
+      rgba(255, 218, 0, .16),
+      transparent 38%
+    );
+  animation: storyGlow 10s ease-in-out infinite alternate;
+}
+
+@keyframes storyGlow {
+  from {
+    transform: translate3d(-3%, 0, 0);
+  }
+  to {
+    transform: translate3d(3%, 3%, 0);
+  }
+}
+
+/* Keep existing plate rotation */
+.hero .hero-visual .hero-image-wrap {
+  animation: smoothPlateSpin 20s linear infinite !important;
+}
+
+/* Accessibility and performance */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .cinematic-reveal,
+  .menu-grid .food-card,
+  .food-image img {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .story-section::before {
+    animation: none;
+  }
+
+  .hero .hero-visual .hero-image-wrap {
+    animation: none !important;
+  }
+}
+
+/* RESTORE PLATE ROTATION */
+
+.hero .hero-visual .hero-image-wrap {
+  animation: shanzehPlateRotation 18s linear infinite !important;
+  transform-origin: 50% 50% !important;
+}
+
+@keyframes shanzehPlateRotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Keep decorative ring still */
+
+.hero .hero-image-ring {
+  animation: none !important;
+}
+
+/* Ensure scroll reveal content remains visible with reduced motion. */
+@media (prefers-reduced-motion: reduce) { .cinematic-reveal, .menu-grid .food-card.cinematic-reveal { opacity: 1 !important; transform: none !important; } }
+
+
+/* PREMIUM REPLAY ANIMATIONS — short, restrained, repeatable */
+/* No menu item entrance animations. Preserve the hover interaction. */
+.menu-grid .food-card,
+.menu-grid .food-card.cinematic-reveal {
+  opacity: 1 !important;
+  filter: none !important;
+  animation: none !important;
+  transform: none;
+  transition: transform 220ms ease, box-shadow 220ms ease !important;
+  transition-delay: 0ms !important;
+}
+.menu-grid .food-card:hover,
+.menu-grid .food-card.cinematic-reveal:hover {
+  transform: translateY(-5px) !important;
+}
+/* Always keep section containers visible; animate text inside them instead. */
+.section-heading, .story-inner, .delivery-inner, .footer-top {
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+}
+@keyframes shanzehTitleSweep {
+  from { opacity: .35; transform: translate3d(0, 16px, 0); filter: blur(3px); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0); filter: blur(0); }
+}
+@keyframes shanzehAccentGrow {
+  from { transform: scaleX(.15); opacity: .45; }
+  to   { transform: scaleX(1); opacity: 1; }
+}
+.section-heading.shanzeh-play h2,
+.story-inner.shanzeh-play h2,
+.delivery-inner.shanzeh-play h2 {
+  animation: shanzehTitleSweep 460ms cubic-bezier(.2,.8,.2,1) both;
+}
+.section-heading.shanzeh-play .section-kicker,
+.story-inner.shanzeh-play .section-kicker,
+.delivery-inner.shanzeh-play .section-kicker {
+  animation: shanzehTitleSweep 360ms ease-out both;
+}
+.section-heading h2::after {
+  transform-origin: center;
+  transition: none !important;
+  width: 70px !important;
+}
+.section-heading.shanzeh-play h2::after {
+  animation: shanzehAccentGrow 440ms ease-out both;
+}
+.footer-top.shanzeh-play .footer-brand {
+  animation: shanzehTitleSweep 440ms ease-out both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .section-heading.shanzeh-play h2,
+  .story-inner.shanzeh-play h2,
+  .delivery-inner.shanzeh-play h2,
+  .section-heading.shanzeh-play .section-kicker,
+  .story-inner.shanzeh-play .section-kicker,
+  .delivery-inner.shanzeh-play .section-kicker,
+  .section-heading.shanzeh-play h2::after,
+  .footer-top.shanzeh-play .footer-brand { animation: none !important; }
+}
+
+/* ==========================================
+   SHANZEH NIHARI — SMOOTH SLIDER FIX
+   Keep all original CSS above this section
+   ========================================== */
+
+   .sn-hero-slider {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  
+  .sn-hero-slider .sn-hero-track {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+    height: 100% !important;
+    position: relative !important;
+    transform: translate3d(0, 0, 0);
+    transition: transform 950ms cubic-bezier(
+      0.22, 1, 0.36, 1
+    );
+    will-change: transform;
+    backface-visibility: hidden;
+  }
+  
+  .sn-hero-slider .sn-hero-slide {
+    display: block !important;
+    position: relative !important;
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    height: 100% !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    transition: none !important;
+    overflow: hidden;
+  }
+  
+  .sn-hero-slider .sn-hero-slide.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  .sn-hero-slider .sn-hero-arrow,
+  .sn-hero-slider .sn-hero-dots,
+  .sn-hero-slider .sn-hero-progress {
+    position: absolute;
+    z-index: 20;
+  }
+  
+  .sn-hero-slider .sn-hero-progress {
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .sn-hero-slider .sn-hero-progress span {
+    display: block;
+    height: 100%;
+    background: #ffda00;
+  }
+  
+  .sn-hero-slider .sn-hero-progress span.run {
+    animation: snProgressSmooth 5s linear forwards;
+  }
+  
+  @keyframes snProgressSmooth {
+    from {
+      width: 0%;
+    }
+  
+    to {
+      width: 100%;
+    }
+  }
+  
+  /* Ensure the banner uses the horizontal track layout */
+  
+  @media (max-width: 700px) {
+    .sn-hero-slider .sn-hero-track {
+      display: flex !important;
+    }
+  
+    .sn-hero-slider .sn-hero-slide {
+      flex: 0 0 100% !important;
+      min-width: 100% !important;
+    }
+  }
+  
+
+/* =====================================================
+   SHANZEH — MINIMAL HEADER (matches current index.html)
+   ===================================================== */
+.site-header.shanzeh-minimal-header{position:relative;top:auto;z-index:100;background:#101010;border:0;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
+.shanzeh-minimal-header .nav-container{position:relative;display:flex;align-items:center;justify-content:space-between;max-width:none;width:100%;height:76px;min-height:76px;padding:0 28px;margin:0;gap:12px}
+.shanzeh-header-left{display:flex;align-items:center;gap:10px;min-width:0;z-index:2}
+.shanzeh-location-pill,.shanzeh-phone-pill{display:inline-flex;align-items:center;gap:8px;min-height:43px;padding:5px 12px;border:0;border-radius:50px;background:#fff;color:#171717;font-family:"DM Sans",sans-serif;text-align:left;text-decoration:none}
+.shanzeh-location-pill{width:185px;max-width:100%;cursor:pointer}
+.shanzeh-phone-pill{font-size:12px;font-weight:800}
+.shanzeh-pill-icon{display:grid;place-items:center;flex-shrink:0;width:29px;height:29px;border-radius:50%;background:#f0f0f0;font-size:14px}
+.shanzeh-pill-copy{display:flex;flex:1;min-width:0;flex-direction:column;gap:2px}
+.shanzeh-pill-copy small{font-size:8px;font-weight:900;color:#b5121b;letter-spacing:.4px}
+.shanzeh-pill-copy strong{display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:11px;font-weight:800;color:#171717}
+.shanzeh-pill-chevron{font-size:21px;color:#555}
+.shanzeh-minimal-header .shanzeh-center-logo{position:absolute;left:50%;top:7px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;justify-content:center;width:83px;height:83px;border:2px solid #e7b93b;border-radius:50%;background:#111;color:#fff;text-decoration:none;z-index:3}
+.shanzeh-logo-initials{font:900 27px/1 "Outfit",sans-serif;color:#ffce38}
+.shanzeh-logo-name{margin-top:3px;font:900 9px "Outfit",sans-serif;letter-spacing:.5px}
+.shanzeh-logo-subtitle{font:800 9px "Outfit",sans-serif;letter-spacing:1.2px;color:#ffce38}
+.shanzeh-minimal-header .shanzeh-header-cart{position:relative;display:grid;place-items:center;flex-shrink:0;width:43px;height:43px;min-width:43px;padding:0;margin-left:auto;border:0;border-radius:50%;background:#fff;color:#111;z-index:2}
+.shanzeh-header-cart .cart-count{position:absolute;right:-5px;top:-5px;min-width:18px;width:18px;height:18px;padding:0;background:#d31c27;color:#fff;font-size:10px}
+@media(max-width:700px){.shanzeh-minimal-header .nav-container{height:70px;min-height:70px;padding:0 12px;gap:6px}.shanzeh-header-left{gap:6px}.shanzeh-location-pill{width:137px;min-height:37px;padding:4px 7px;gap:5px}.shanzeh-pill-icon{width:24px;height:24px;font-size:12px}.shanzeh-pill-copy strong{font-size:9px}.shanzeh-pill-copy small{font-size:7px}.shanzeh-pill-chevron{font-size:16px}.shanzeh-phone-pill{display:none}.shanzeh-minimal-header .shanzeh-center-logo{width:65px;height:65px;top:5px}.shanzeh-logo-initials{font-size:20px}.shanzeh-logo-name,.shanzeh-logo-subtitle{font-size:7px}.shanzeh-minimal-header .shanzeh-header-cart{width:37px;height:37px;min-width:37px}}
+
+/* =====================================================
+   CATEGORY NAVIGATION — screenshot-inspired orange bar
+   ===================================================== */
+.menu-category-bar{position:sticky;top:0;z-index:120;width:100%;background:#f5a018;border-bottom:1px solid rgba(0,0,0,.09);box-shadow:0 3px 12px rgba(0,0,0,.08)}
+.menu-category-inner{position:relative;display:flex;align-items:center;justify-content:center;gap:12px;min-height:56px;max-width:100%;margin:auto;padding:7px 16px;overflow-x:auto;scrollbar-width:none;scroll-behavior:smooth}
+.menu-category-inner::-webkit-scrollbar{display:none}
+.menu-category-link{position:relative;z-index:2;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;min-height:36px;padding:9px 19px;border-radius:50px;color:#171717;font:800 12px/1.2 "DM Sans",sans-serif;white-space:nowrap;text-decoration:none;transition:color .22s ease}
+.menu-category-link.active{color:#fff}
+.menu-category-link:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.menu-active-pill{position:absolute;left:0;top:50%;width:0;height:36px;border-radius:50px;background:#171717;box-shadow:0 3px 9px rgba(0,0,0,.18);transform:translate3d(0,0,0);margin-top:-18px;pointer-events:none;z-index:1;transition:transform 380ms cubic-bezier(.2,.8,.2,1),width 380ms cubic-bezier(.2,.8,.2,1)}
+.menu-collections{background:#fff4e4}
+.menu-category-section{scroll-margin-top:70px;padding-top:74px;padding-bottom:85px}
+.menu-category-section + .menu-category-section{border-top:1px solid #ead7c7}
+.menu-category-section .section-heading{margin-bottom:36px}
+.menu-category-section .section-heading h2{margin:0;color:#301019;font-size:clamp(32px,4.4vw,54px);letter-spacing:-1.3px}
+.menu-category-section .section-heading h2::after{content:"";display:block;width:65px;height:4px;margin:17px auto 0;border-radius:4px;background:#d71920}
+@media(max-width:700px){.menu-category-inner{justify-content:flex-start;gap:2px;min-height:52px;padding:7px 12px}.menu-category-link{padding:9px 15px;font-size:11px}.menu-category-section{padding:58px 5% 70px;scroll-margin-top:64px}.menu-category-section .section-heading{margin-bottom:28px}}
+@media(prefers-reduced-motion:reduce){.menu-active-pill,.menu-category-link{transition:none!important}.menu-category-inner{scroll-behavior:auto!important}}
+
+/* ============================================================
+   PHASE 2 — RESPONSIVE PREMIUM FINISH
+   Compatible with Phase 1 premium index.html.
+   Kept as scoped overrides so original cart, checkout, menu,
+   slider and location popup rules remain intact.
+   ============================================================ */
+:root { --sh-ink:#231d1a; --sh-red:#9f0d17; --sh-cream:#fff9ef; --sh-line:#e9dfd2; }
+html { scroll-behavior:smooth; }
+body { background:var(--sh-cream); color:var(--sh-ink); }
+.site-header.premium-header { position:sticky; top:0; z-index:130; width:100%; background:#fff9ef; border-bottom:1px solid var(--sh-line); box-shadow:0 4px 20px rgba(35,18,12,.055); }
+.premium-header .nav-container.premium-nav { display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr); max-width:1440px; min-height:74px; height:auto; padding:9px clamp(20px,4vw,72px); gap:18px; margin:auto; }
+.premium-header .shanzeh-center-logo.premium-brand { position:static; left:auto; top:auto; transform:none; display:inline-flex; flex-direction:row; width:auto; height:auto; justify-self:start; gap:12px; padding:0; border:0; border-radius:0; background:transparent; color:var(--sh-red); box-shadow:none; text-align:left; }
+.premium-header .premium-brand .shanzeh-logo-initials { flex:none; display:grid; place-items:center; width:46px; height:46px; border-radius:12px; background:var(--sh-red); color:#ffcf20; font-size:18px; letter-spacing:-1px; }
+.premium-header .premium-brand .shanzeh-logo-name { margin:0; color:var(--sh-red); font:900 clamp(19px,2vw,27px)/1 'Outfit',sans-serif; letter-spacing:-.7px; }
+.premium-header .premium-brand .shanzeh-logo-subtitle { color:#2c2622; font:800 9px/1.4 'Outfit',sans-serif; letter-spacing:3.2px; }
+.premium-header .premium-nav-links { justify-self:center; gap:34px; }
+.premium-header .premium-nav-links a { text-decoration:none; }
+.premium-header .premium-nav-actions { justify-self:end; min-width:0; }
+.premium-header .shanzeh-header-cart { margin-left:0; width:44px; height:44px; min-width:44px; border:1px solid #eadfce; border-radius:50%; background:#fff; }
+.premium-header .premium-order-link { min-height:43px; border-radius:30px; box-shadow:0 5px 14px rgba(159,13,23,.12); }
+.premium-header .premium-location-strip { min-height:43px; padding:5px clamp(20px,4vw,72px); background:#fff0d5; }
+.premium-header .shanzeh-location-pill { width:auto; max-width:min(70vw,390px); min-height:30px; padding:0; }
+.premium-header .shanzeh-pill-icon { background:transparent; width:25px; height:25px; }
+.premium-header .shanzeh-pill-copy strong { max-width:320px; }
+.premium-header .premium-delivery-price { font-size:11px; }
+/* Keep content from stretching unnaturally on wide monitors. */
+.menu-category-section .menu-grid { max-width:1280px; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; }
+.menu-category-section { padding:70px clamp(22px,5vw,76px) 82px; }
+.menu-category-section .section-heading { margin-bottom:34px; }
+.menu-category-section .section-heading h2 { font-size:clamp(30px,3.6vw,49px); line-height:1.14; }
+.menu-category-section .food-card { border-radius:15px; box-shadow:0 6px 22px rgba(30,18,12,.06); }
+.menu-category-section .food-card:hover { transform:translateY(-4px); box-shadow:0 12px 30px rgba(30,18,12,.1); }
+.menu-category-section .food-image { height:clamp(175px,18vw,225px); }
+.menu-category-section .food-info { padding:19px; }
+.menu-category-section .food-info h3 { font-size:18px; margin-bottom:7px; }
+.menu-category-section .food-info p { font-size:13px; line-height:1.55; min-height:0; }
+.menu-category-section .food-bottom { margin-top:16px; }
+.menu-category-section .price { font-size:19px; }
+.menu-category-section .add-btn { min-height:40px; padding:10px 14px; border-radius:9px; }
+.menu-category-bar { top:116px; z-index:115; }
+.menu-category-section { scroll-margin-top:180px; }
+.story-section { padding:82px 5%; }
+.story-section p { line-height:1.7; }
+.delivery-section { padding:55px 5%; }
+.footer { padding-top:50px; }
+@media (min-width:901px) and (max-width:1199px) {
+ .premium-header .nav-container.premium-nav { gap:12px; padding-inline:24px; }
+ .premium-header .premium-nav-links { gap:20px; }
+ .menu-category-section .menu-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+ .menu-category-section .food-info { padding:16px; }
+}
+@media (max-width:900px) {
+ .premium-header .nav-container.premium-nav { grid-template-columns:minmax(0,1fr) auto; min-height:65px; padding:8px 4%; }
+ .premium-header .premium-nav-links { display:none; }
+ .premium-header .premium-nav-actions { gap:8px; }
+ .menu-category-bar { top:105px; }
+ .menu-category-section { scroll-margin-top:165px; }
+ .menu-category-section .menu-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:17px; }
+ .menu-category-section .food-image { height:190px; }
+}
+@media (max-width:600px) {
+ html { scroll-padding-top:116px; }
+ .premium-header .nav-container.premium-nav { min-height:58px; padding:7px 13px; gap:7px; }
+ .premium-header .shanzeh-center-logo.premium-brand { gap:7px; min-width:0; }
+ .premium-header .premium-brand .shanzeh-logo-initials { width:36px; height:36px; font-size:15px; border-radius:9px; }
+ .premium-header .premium-brand .shanzeh-logo-name { font-size:17px; }
+ .premium-header .premium-brand .shanzeh-logo-subtitle { font-size:7px; letter-spacing:2.3px; }
+ .premium-header .premium-nav-actions { gap:5px; }
+ .premium-header .shanzeh-header-cart { width:36px; height:36px; min-width:36px; padding:6px; }
+ .premium-header .premium-order-link { min-height:35px; padding:10px 11px; font-size:10px; gap:4px; }
+ .premium-header .premium-location-strip { min-height:39px; padding:4px 13px; gap:6px; }
+ .premium-header .shanzeh-location-pill { max-width:calc(100vw - 125px); gap:5px; }
+ .premium-header .shanzeh-pill-icon { width:20px; height:20px; font-size:14px; }
+ .premium-header .shanzeh-pill-copy small { font-size:7px; letter-spacing:.4px; }
+ .premium-header .shanzeh-pill-copy strong { max-width:calc(100vw - 160px); font-size:10px; }
+ .premium-header .shanzeh-pill-chevron { font-size:14px; }
+ .premium-header .premium-delivery-price { font-size:9px; }
+ .sn-hero-slider { height:clamp(345px,100vw,420px); }
+ .sn-hero-copy { bottom:49px; }
+ .sn-hero-copy h1,.sn-hero-copy h2 { font-size:clamp(32px,9vw,46px); line-height:1.07; }
+ .sn-hero-copy p { font-size:12px; line-height:1.45; margin:10px 0 13px; }
+ .sn-hero-cta { padding:12px 16px; font-size:10px; }
+ .promise-strip { padding:12px 4%; gap:8px; font-size:9px; }
+ .menu-category-bar { top:97px; }
+ .menu-category-inner { min-height:48px; }
+ .menu-category-section { padding:42px 14px 53px; scroll-margin-top:151px; }
+ .menu-category-section .section-heading { margin-bottom:22px; }
+ .menu-category-section .section-heading h2 { font-size:clamp(28px,8vw,36px); }
+ .menu-category-section .menu-grid { grid-template-columns:1fr; gap:12px; }
+ /* Horizontal food rows reduce the feeling of an endless wall of cards. */
+ .menu-category-section .food-card { display:grid; grid-template-columns:110px minmax(0,1fr); min-height:124px; border-radius:13px; }
+ .menu-category-section .food-image { height:100%; min-height:124px; }
+ .menu-category-section .food-info { padding:11px 12px; display:flex; flex-direction:column; min-width:0; }
+ .menu-category-section .food-info h3 { font-size:15px; line-height:1.25; margin-bottom:5px; }
+ .menu-category-section .food-info p { font-size:11px; line-height:1.35; min-height:0; }
+ .menu-category-section .food-bottom { margin-top:auto; padding-top:8px; }
+ .menu-category-section .price { font-size:15px; white-space:nowrap; }
+ .menu-category-section .add-btn { min-height:34px; padding:8px 10px; font-size:11px; }
+ .menu-category-section .food-badge { top:7px; left:7px; padding:5px 6px; font-size:8px; }
+ .story-section { padding:57px 6%; }
+ .story-section h2 { font-size:clamp(29px,8vw,40px); }
+ .story-section p { font-size:14px; line-height:1.6; }
+ .delivery-section { padding:40px 6%; }
+ .delivery-section h2 { font-size:clamp(26px,7vw,36px); }
+ .footer { padding:40px 6% 22px; }
+ .footer-bottom { margin-top:30px; }
+ .cart-header { padding:21px; }
+ .cart-items { padding:18px; }
+ .cart-footer { padding:19px; }
+ .checkout-modal { max-height:calc(100dvh - 22px); padding:24px 18px; }
+}
+@media (max-width:360px) {
+ .premium-header .premium-order-link { padding:9px 8px; }
+ .premium-header .premium-brand .shanzeh-logo-name { font-size:15px; }
+ .premium-header .premium-delivery-price { font-size:8px; }
+ .menu-category-section .food-card { grid-template-columns:95px minmax(0,1fr); }
+ .menu-category-section .food-info { padding:9px; }
+ .menu-category-section .food-info h3 { font-size:14px; }
+}
+@media (prefers-reduced-motion:reduce) {
+ .menu-category-section .food-card,.menu-category-section .food-image img { transition:none!important; }
+ .menu-category-section .food-card:hover { transform:none; }
+}
+
+
+/* SHANZEH CENTER-LOGO HEADER — added without deleting original CSS */
+.site-header.sn-reference-header { position:sticky!important;top:0!important;z-index:120!important;background:#a60e19!important;border-bottom:4px solid #ffd21f!important;box-shadow:0 5px 18px rgba(47,0,0,.15)!important;overflow:visible!important; }
+.sn-reference-header .sn-header-inner { min-height:82px;max-width:1440px;margin:auto;padding:0 4%;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:16px;position:relative; }
+.sn-header-left {display:flex;gap:12px;align-items:center;min-width:0;justify-self:start;}
+.sn-header-pill {display:inline-flex;align-items:center;gap:10px;border:0;border-radius:40px;background:#fff;color:#211b17;padding:8px 15px;text-decoration:none;min-height:47px;box-shadow:0 3px 10px #3300001c;font:800 13px 'DM Sans',sans-serif;white-space:nowrap;}
+.sn-location-button {cursor:pointer;max-width:265px;min-width:190px;text-align:left;}
+.sn-pill-icon {width:31px;height:31px;flex:0 0 31px;display:grid;place-items:center;border-radius:50%;background:#f2ede9;font-size:20px;color:#a60e19;}
+.sn-pill-copy {display:flex;flex-direction:column;min-width:0;line-height:1.2;}
+.sn-pill-copy small {font-size:9px;font-weight:900;color:#a60e19;letter-spacing:.6px;}
+.sn-pill-copy strong {font-size:12px;font-weight:800;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:170px;}
+.sn-chevron {font-size:24px;font-weight:400;margin-left:auto;}
+.sn-phone-pill strong {font-size:13px;}
+.sn-header-logo {position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;justify-self:center;align-self:start;z-index:3;width:110px;height:110px;margin-bottom:-28px;border:5px solid #ffd21f;border-radius:50%;background:#fff9ef;text-decoration:none;color:#a60e19;box-shadow:0 5px 14px #36000045;}
+.sn-logo-cow {font-size:45px;line-height:1;position:relative;top:3px;}
+.sn-logo-caption {font:900 11px/1 'Outfit',sans-serif;letter-spacing:.5px;text-align:center;margin-top:3px;}
+.sn-logo-caption small {display:block;font-size:9px;letter-spacing:2px;margin-top:2px;}
+.sn-logo-chefhat {position:absolute;top:1px;left:50%;transform:translateX(-50%);z-index:2;width:43px;height:25px;}
+.sn-hat-puff {position:absolute;inset:0 2px 5px;background:#b5121b;border-radius:13px 13px 7px 7px;box-shadow:-8px 3px 0 -3px #b5121b,8px 3px 0 -3px #b5121b;}
+.sn-hat-band {position:absolute;bottom:0;left:4px;right:4px;height:7px;background:#8d0b15;border-radius:2px;}
+.sn-header-right {justify-self:end;display:flex;align-items:center;}
+.sn-cart-button {width:49px;height:49px;display:grid;place-items:center;position:relative;border:0;border-radius:50%;background:#fff;color:#211b17;font-size:23px;cursor:pointer;}
+.sn-cart-button .cart-count {position:absolute;top:-5px;right:-5px;background:#ffd21f;color:#221b16;min-width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-size:11px;}
+/* Shanzeh's own red/yellow category branding */
+.menu-category-bar {background:#b5121b!important;border-color:#970c14!important;}
+.menu-category-link {color:#fff!important;}
+.menu-category-link.active,.menu-category-link[aria-current="true"] {color:#27150c!important;}
+.menu-active-pill {background:#ffd21f!important;box-shadow:0 3px 12px #0002!important;}
+.menu-category-link:hover {color:#ffd21f!important;}
+.menu-category-link.active:hover {color:#27150c!important;}
+@media(max-width:760px) {
+ .sn-reference-header .sn-header-inner {min-height:72px;padding:0 3%;gap:8px;}
+ .sn-header-left {gap:6px;}
+ .sn-header-pill {padding:6px 8px;min-height:39px;gap:6px;}
+ .sn-location-button {min-width:0;max-width:min(44vw,210px);}
+ .sn-pill-icon {width:27px;height:27px;flex-basis:27px;font-size:16px;}
+ .sn-pill-copy small {font-size:8px;}
+ .sn-pill-copy strong {font-size:10px;max-width:115px;}
+ .sn-chevron {font-size:18px;}
+ .sn-phone-pill {display:none;}
+ .sn-header-logo {width:77px;height:77px;margin-bottom:-13px;border-width:3px;}
+ .sn-logo-cow {font-size:31px;top:2px;}
+ .sn-logo-caption {font-size:8px;margin-top:1px;}
+ .sn-logo-caption small {font-size:7px;letter-spacing:1px;}
+ .sn-logo-chefhat {top:0;width:31px;height:17px;}
+ .sn-hat-band {height:5px;}
+ .sn-cart-button {width:39px;height:39px;font-size:19px;}
+}
+@media(max-width:380px){.sn-location-button {max-width:42vw;}.sn-pill-copy strong {max-width:80px;}.sn-header-logo {width:68px;height:68px;}.sn-logo-cow {font-size:27px;}}
+
+/* ORIGINAL SHANZEH MENU BANNERS — compact, centered, independent of header */
+.menu-collections .shanzeh-category-banner{position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:center;justify-content:space-between;gap:18px;width:min(100%,1060px);min-height:205px;margin:0 auto 28px;padding:28px clamp(26px,5vw,70px);border-radius:24px;background:#9f0d17;color:#fff9ef;box-shadow:0 12px 28px rgba(59,18,12,.12)}
+.shanzeh-category-banner::before{content:"";position:absolute;z-index:-1;right:-8%;top:-90%;width:68%;height:250%;border-radius:50%;transform:rotate(-19deg);background:#ffcf20}
+.shanzeh-category-banner::after{content:"";position:absolute;z-index:-1;right:8%;top:-95%;width:38%;height:240%;border:2px solid rgba(255,255,255,.24);border-radius:50%;transform:rotate(-20deg)}
+.category-banner-content{position:relative;z-index:2;flex:1;min-width:0}.category-banner-kicker{display:block;margin-bottom:10px;font:800 11px/1.2 'DM Sans',sans-serif;letter-spacing:2.5px;color:#ffe178}
+.shanzeh-category-banner h2{margin:0;color:#fff;font:900 clamp(35px,5.2vw,70px)/1 'Outfit',sans-serif;letter-spacing:-1.8px;text-transform:uppercase}.shanzeh-category-banner p{margin:12px 0 0;color:#ffe9dd;font:500 clamp(12px,1.3vw,16px)/1.4 'DM Sans',sans-serif}
+.category-banner-art{position:relative;z-index:1;flex:0 0 clamp(180px,29%,290px);display:grid;place-items:center;align-self:stretch}.category-banner-art svg{display:block;width:100%;max-width:265px;height:auto;filter:drop-shadow(0 12px 10px rgba(52,24,9,.17))}.category-banner-stamp{position:absolute;right:15px;bottom:12px;font:900 8px/1.2 'Outfit',sans-serif;letter-spacing:2px;text-align:right;color:#5b170e;opacity:.8}
+.banner-biryani{background:#72151b}.banner-biryani::before{background:#f5b83c}.banner-paye{background:#822b1c}.banner-paye::before{background:#ffd35a}.banner-halwa{background:#a21a1c}.banner-halwa::before{background:#f5c84a}
+.category-menu-pending{width:min(100%,1060px);margin:0 auto 22px;padding:14px 18px;background:#fff5e8;border:1px solid #eedbc3;border-radius:10px;color:#715341;font-size:14px}
+@media(max-width:650px){.menu-collections .shanzeh-category-banner{width:calc(100% - 24px);min-height:155px;margin:0 auto 22px;padding:22px 19px;border-radius:16px;gap:4px}.shanzeh-category-banner::before{right:-26%;width:85%}.category-banner-kicker{font-size:8px;letter-spacing:1.5px;margin-bottom:8px}.shanzeh-category-banner h2{font-size:clamp(26px,7.1vw,42px);letter-spacing:-.8px}.shanzeh-category-banner p{font-size:10px;margin-top:9px}.category-banner-art{flex-basis:38%;min-width:110px}.category-banner-stamp{font-size:6px;right:10px;bottom:9px}.category-menu-pending{width:calc(100% - 24px);font-size:12px}}
+
+/* Photographic menu banners — three sections, no duplicate headings */
+.menu-collections .shanzeh-photo-banner{display:block;width:min(100%,1060px);height:auto;aspect-ratio:7.1/1;object-fit:fill;margin:0 auto 28px;border-radius:18px;box-shadow:0 10px 26px rgba(51,15,12,.12)}
+@media(max-width:650px){.menu-collections .shanzeh-photo-banner{width:100%;margin-bottom:22px;border-radius:12px;aspect-ratio:5.6/1;object-fit:cover}}
+
+/* SHANZEH NIHARI — REAL SHOP ADDRESS */
+
+.shanzeh-shop-address {
+  margin-top: 20px;
+}
+
+.shanzeh-shop-address h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.shanzeh-shop-address p,
+.shanzeh-pickup-address p {
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 8px 0;
+}
+
+.shanzeh-shop-address a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #c62828;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.shanzeh-pickup-address {
+  margin-top: 14px;
+  padding: 14px;
+  background: #fff8e5;
+  border-left: 3px solid #c62828;
+  border-radius: 8px;
+  color: #292929;
+}
+
+/* SHANZEH NIHARI — PREMIUM INTRO SECTION */
+
+.shanzeh-intro {
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 50px auto 65px;
+  padding: 24px;
+  background: #f7f5f1;
+  border: 1px solid #eee6dc;
+  border-radius: 18px;
+  box-sizing: border-box;
+}
+
+.shanzeh-intro-content {
+  background: #ffffff;
+  padding: 30px 36px;
+  border-radius: 12px;
+  border-left: 4px solid #b5121b;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.035);
+}
+
+.shanzeh-intro-content p {
+  margin: 0;
+  color: #302a27;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.9;
+  letter-spacing: 0.1px;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .shanzeh-intro {
+    width: calc(100% - 24px);
+    margin: 30px auto 45px;
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .shanzeh-intro-content {
+    padding: 20px;
+    border-radius: 9px;
+  }
+
+  .shanzeh-intro-content p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+}
+
+/* SHANZEH — HEADER SCROLL FIX */
+
+/* Header stays in its normal position */
+.site-header,
+.site-header.premium-header,
+.site-header.sn-reference-header {
+  position: relative !important;
+  top: auto !important;
+}
+
+/* Only the menu category navigation stays sticky */
+.menu-category-bar {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 100 !important;
+}
+
+/* Category sections align correctly when clicked */
+.menu-category-section {
+  scroll-margin-top: 80px !important;
+}
+
+/* FOOTER — POWERED BY HS */
+
+.footer-credit {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.footer-credit .footer-hs {
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+
+/* ===========================================================
+   MOBILE SHOWCASE REFINEMENT — 2026-11-14
+   Desktop and original order logic intentionally unchanged.
+   =========================================================== */
+@media (max-width: 760px) {
+  html, body { max-width:100%; overflow-x:clip; }
+  .site-header.sn-reference-header { position:relative !important; top:auto !important; }
+  .sn-reference-header .sn-header-inner { min-height:74px; padding:0 14px; grid-template-columns:minmax(0,1fr) 80px minmax(0,1fr); gap:5px; }
+  .sn-header-left { min-width:0; }
+  .sn-location-button { width:100%; min-width:0; max-width:100%; padding:7px 8px; }
+  .sn-pill-copy { min-width:0; }
+  .sn-pill-copy strong { max-width:clamp(66px,18vw,128px); }
+  .sn-header-logo { width:79px; height:79px; margin-bottom:-9px; }
+  .sn-header-right { min-width:0; }
+  .sn-cart-button { width:42px; height:42px; }
+  .sn-hero-slider { width:100%; height:clamp(440px,125vw,555px); border-radius:0; }
+  .sn-hero-photo { inset:0 0 20% 0; }
+  .sn-hero-photo img { object-fit:cover; object-position:center 45%; }
+  .sn-hero-slide::before { background:linear-gradient(0deg,rgba(14,8,6,.97) 0%,rgba(14,8,6,.86) 28%,rgba(14,8,6,.08) 78%); }
+  .sn-hero-copy { left:6%; bottom:68px; top:auto; transform:none; width:88%; }
+  .sn-hero-copy h1,.sn-hero-copy h2 { font-size:clamp(39px,10.8vw,58px); line-height:1.02; letter-spacing:-1.5px; }
+  .sn-hero-copy p { font-size:13px; line-height:1.5; max-width:335px; margin:13px 0 18px; }
+  .sn-hero-cta { min-height:43px; padding:13px 19px; }
+  .sn-hero-arrow { top:40%; }
+  .sn-hero-dots { bottom:21px; }
+  .promise-strip { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px 8px; padding:17px 14px; }
+  .menu-category-bar { top:0 !important; z-index:100 !important; }
+  .menu-category-inner { justify-content:center; gap:2px; min-height:53px; padding:6px 8px; }
+  .menu-category-link { padding:10px clamp(8px,2.4vw,16px); font-size:clamp(10px,2.6vw,12px); }
+  .menu-category-section { padding:29px 13px 42px; scroll-margin-top:65px !important; }
+  .menu-collections .shanzeh-photo-banner { display:block; width:100%; height:clamp(108px,29vw,175px); aspect-ratio:auto; object-fit:cover; object-position:center; border-radius:14px; margin:0 auto 18px; }
+  .menu-category-section .menu-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+  .menu-category-section .food-card { display:flex; flex-direction:column; min-width:0; min-height:0; overflow:hidden; border-radius:15px; }
+  .menu-category-section .food-image { width:100%; height:auto; min-height:0; aspect-ratio:1.32/1; flex:none; }
+  .menu-category-section .food-image img { width:100%; height:100%; object-fit:cover; }
+  .menu-category-section .food-info { display:flex; flex:1; flex-direction:column; padding:12px 11px 13px; min-width:0; }
+  .menu-category-section .food-info h3 { font-size:clamp(14px,3.7vw,18px); line-height:1.2; margin:0 0 6px; overflow-wrap:anywhere; }
+  .menu-category-section .food-info p { font-size:11px; line-height:1.45; min-height:0; margin:0 0 12px; }
+  .menu-category-section .food-bottom { margin-top:auto; padding:0; display:flex; flex-direction:column; align-items:stretch; gap:9px; }
+  .menu-category-section .price { font-size:clamp(15px,4vw,18px); line-height:1.2; white-space:normal; }
+  .menu-category-section .add-btn { width:100%; min-height:39px; padding:9px 6px; font-size:10px; border-radius:10px; }
+  .menu-category-section .food-badge { top:7px; left:7px; font-size:8px; padding:5px 7px; max-width:calc(100% - 14px); }
+  .shanzeh-intro { width:calc(100% - 26px); margin:28px auto 42px; padding:12px; }
+  .shanzeh-intro-content { padding:18px; }
+  .shanzeh-intro-content p { font-size:13px; line-height:1.75; }
+  .footer { padding:34px 17px 20px; }
+  .footer-top { gap:22px; }
+  .footer-bottom { gap:10px; flex-wrap:wrap; }
+  .cart-drawer { width:min(100%,420px); max-width:100vw; }
+  .checkout-modal { width:calc(100% - 20px); max-height:calc(100dvh - 20px); overflow-y:auto; }
+  .order-modal-overlay { padding:10px; }
+  .order-modal { width:100%; max-height:calc(100dvh - 20px); }
+  .order-modal-content { padding:17px 15px 12px; }
+}
+@media (max-width: 355px) {
+  .sn-reference-header .sn-header-inner { grid-template-columns:minmax(0,1fr) 68px minmax(0,1fr); padding:0 8px; }
+  .sn-header-logo { width:68px; height:68px; }
+  .sn-pill-icon { display:none; }
+  .sn-location-button { padding:6px 7px; }
+  .sn-pill-copy strong { max-width:80px; }
+  .menu-category-inner { justify-content:flex-start; }
+  .menu-category-section .menu-grid { gap:9px; }
+  .menu-category-section .food-info { padding:10px 9px; }
+  .menu-category-section .food-info h3 { font-size:13px; }
+  .menu-category-section .add-btn { font-size:9px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .menu-category-inner { scroll-behavior:auto; }
+  .menu-category-section .food-card { transition:none; }
+}
+
+/* MOBILE BANNER FIX: preserve complete artwork, never crop text.
+   Desktop CSS is intentionally untouched. */
+@media screen and (max-width: 760px) {
+  .menu-collections .menu-category-section .shanzeh-photo-banner {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    border-radius: 12px !important;
+    margin: 0 auto 20px !important;
+  }
+  .menu-collections .menu-category-section {
+    overflow-x: clip;
+  }
+}
+
+/* SHANZEH MOBILE INTERFACE POLISH — desktop untouched */
+@media screen and (max-width:760px) {
+  body { background:#fffaf4; }
+  .site-header.sn-reference-header { background:#a60e19!important; box-shadow:0 2px 9px rgba(55,0,0,.10)!important; }
+  .sn-reference-header .sn-header-inner { min-height:69px; padding:0 12px; gap:7px; }
+  .sn-header-pill.sn-location-button { background:#fff!important; border-radius:30px!important; min-height:39px; padding:6px 9px; box-shadow:none!important; }
+  .sn-pill-copy strong { font-size:10px; }
+  .sn-header-logo { width:70px; height:70px; margin-bottom:-8px; box-shadow:0 3px 10px #0002; }
+  .sn-cart-button { background:#fff!important; border-radius:50%!important; width:42px; height:42px; }
+  .sn-hero-slider { width:calc(100% - 20px)!important; height:clamp(340px,105vw,455px)!important; margin:12px auto 10px!important; border-radius:17px!important; overflow:hidden; box-shadow:0 6px 20px #00000016; }
+  .sn-hero-photo { inset:0 0 14% 0; }
+  .sn-hero-copy { bottom:52px; }
+  .sn-hero-copy h1,.sn-hero-copy h2 { font-size:clamp(33px,9vw,49px); line-height:1.02; }
+  .sn-hero-copy p { font-size:12px; line-height:1.45; margin:10px 0 13px; }
+  .sn-hero-kicker { margin-bottom:9px; }
+  .sn-hero-cta { padding:12px 16px; min-height:40px; }
+  .sn-hero-arrow { width:32px; height:32px; background:#ffffffe8; }
+  .promise-strip { padding:12px 9px; gap:8px; font-size:9px; }
+  .menu-category-bar { top:0!important; background:#f5a018!important; border:0!important; box-shadow:0 2px 9px #00000012; }
+  .menu-category-inner { display:flex; align-items:center; justify-content:space-evenly; width:100%; min-height:54px; padding:6px 8px; gap:3px; overflow-x:auto; scrollbar-width:none; }
+  .menu-category-inner::-webkit-scrollbar { display:none; }
+  .menu-category-link { flex:0 0 auto; font-size:clamp(11px,2.85vw,13px); padding:10px 9px; white-space:nowrap; border-radius:22px; }
+  .menu-active-pill { border-radius:22px; }
+  .menu-category-section { padding:24px 12px 36px; }
+  .menu-collections .menu-category-section .shanzeh-photo-banner { box-shadow:0 4px 15px #00000012; border-radius:13px!important; margin-bottom:18px!important; }
+  .menu-category-section .food-card { box-shadow:0 3px 14px #0000000d; border:1px solid #eee9e3; }
+  .menu-category-section .food-info { background:#fff; }
+  .shanzeh-intro { margin-top:22px; }
+}
+@media screen and (max-width:360px) {
+  .sn-reference-header .sn-header-inner { padding:0 8px; }
+  .menu-category-link { font-size:10px; padding:9px 7px; }
+}
+
+
+/* Floating Go to Cart shortcut — works on desktop and mobile */
+.floating-go-to-cart {
+  position: fixed;
+  right: 22px;
+  bottom: 24px;
+  z-index: 120;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 48px;
+  padding: 11px 17px;
+  border: 2px solid #ffd43b;
+  border-radius: 999px;
+  background: #ae101b;
+  color: #fff;
+  box-shadow: 0 9px 25px rgba(54, 10, 10, .23);
+  font: 800 14px/1.2 "DM Sans", sans-serif;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.floating-go-to-cart[hidden] { display: none !important; }
+.floating-go-to-cart:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(54,10,10,.3); }
+.floating-go-to-cart:focus-visible { outline: 3px solid #ffca28; outline-offset: 3px; }
+.floating-cart-count { display: grid; place-items: center; min-width: 25px; height: 25px; padding: 0 5px; border-radius: 50%; background: #ffca28; color: #511014; font-size: 12px; }
+body.no-scroll .floating-go-to-cart { display: none !important; }
+@media (max-width: 760px) {
+  .floating-go-to-cart { right: 14px; bottom: max(16px, env(safe-area-inset-bottom)); padding: 10px 14px; min-height: 46px; font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) { .floating-go-to-cart { transition: none; } }
+
+
+/* SHANZEH — SUBTLE SN LOGOS, LIMITED TO MENU ONLY */
+/* Uses existing sn-menu-fixed.png in the project root. */
+.menu-collections {
+  position: relative !important;
+  isolation: isolate;
+  background: #fff !important;
+  background-image: none !important;
+  overflow: clip;
+}
+.menu-collections::before {
+  content: "" !important;
+  display: block !important;
+  position: sticky !important;
+  top: 0 !important;
+  width: 100% !important;
+  height: 100vh !important;
+  margin-bottom: -100vh !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  background: url("./sn-menu-fixed.png") center center / contain no-repeat !important;
+  opacity: 0.19 !important;
+}
+.menu-collections > .menu-category-section {
+  position: relative;
+  z-index: 1;
+  background: transparent !important;
+  background-image: none !important;
+}
+/* All sections after the menu retain their own clean backgrounds. */
+.shanzeh-intro { position: relative; z-index: 1; }
+@media (max-width: 760px) {
+  .menu-collections::before {
+    background-size: 155% auto !important;
+    opacity: 0.15 !important;
+  }
+}
+
+/* DEHLI KAMAL — STEP 2 BRAND OVERRIDES */
+:root { --burgundy:#54151D; --deep:#300B11; --red:#54151D; --red-hover:#410F16; --gold:#E9B83F; --cream:#FFF5E2; --panel:#54151D; --premium-red:#54151D; --premium-yellow:#E9B83F; --premium-ivory:#FFF5E2; }
+.food-photo-pending {min-height:180px;display:grid;place-items:center;background:linear-gradient(135deg,#54151D,#300B11);color:#E9B83F;font-size:36px}
+/* Old restaurant-specific photos are intentionally hidden pending approved replacement assets. */
+.sn-hero-slide img, .sn-hero-slide picture, .shanzeh-photo-banner, .sn-demo-disclaimer {display:none!important}
+
+/* DEHLI KAMAL — consistent brand polish */
+.site-header.sn-reference-header{background:#54151D!important}
+.menu-category-bar{background:#E9B83F!important;color:#54151D!important}
+.sn-logo-cow{color:#E9B83F!important}
+body{background:#FFF5E2}
+
+/* DEHLI KAMAL — WARM SPICE & HERITAGE FINAL THEME */
+:root{--burgundy:#561B2A;--deep:#3E1020;--red:#561B2A;--red-hover:#431322;--gold:#D99A28;--cream:#FFF8EC;--panel:#561B2A;--premium-red:#561B2A;--premium-yellow:#D99A28;--premium-ivory:#FFF8EC}
+body{background:#FFF8EC;color:#3E1020}
+.site-header.sn-reference-header,.site-header.shanzeh-minimal-header{background:#561B2A!important}
+.menu-category-bar{background:#D99A28!important;color:#3E1020!important}
+.sn-logo-cow{color:#D99A28!important}
+.food-photo-pending{background:linear-gradient(135deg,#561B2A,#3E1020);color:#D99A28}
