@@ -1,0 +1,1355 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#561B2A">
+  <meta name="description" content="Order authentic Karachi Nihari from Dehli Kamal Nihari & Sheermal House. Fresh, flavourful and delivered across Karachi.">
+  <title>Dehli Kamal Nihari & Sheermal House | Karachi Ki Asli Nihari</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* =========================================
+       DEHLI KAMAL NIHARI — HERO SLIDER
+       ========================================= */
+
+    .sn-hero-slider {
+      position: relative;
+      width: min(96%, 1500px);
+      height: clamp(440px, 48vw, 650px);
+      margin: 18px auto 34px;
+      overflow: hidden;
+      border-radius: 22px;
+      background: #171717;
+      isolation: isolate;
+      box-shadow: 0 20px 55px rgba(0,0,0,.16);
+    }
+
+    .sn-hero-slider .sn-hero-track {
+      position: relative !important;
+      display: flex !important;
+      flex-wrap: nowrap !important;
+      width: 100% !important;
+      height: 100% !important;
+      transform: translate3d(0,0,0);
+      will-change: transform;
+      backface-visibility: hidden;
+    }
+
+    .sn-hero-slider .sn-hero-slide {
+      position: relative !important;
+      display: block !important;
+      flex: 0 0 100% !important;
+      width: 100% !important;
+      min-width: 100% !important;
+      height: 100% !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none !important;
+      overflow: hidden;
+      background: #171717;
+    }
+
+    .sn-hero-slide::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background: linear-gradient(
+        90deg,
+        rgba(12,12,12,.98) 0%,
+        rgba(12,12,12,.93) 35%,
+        rgba(12,12,12,.55) 56%,
+        rgba(12,12,12,.06) 100%
+      );
+      pointer-events: none;
+    }
+
+    .sn-hero-slide::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      right: -13%;
+      top: -40%;
+      width: 63%;
+      height: 180%;
+      border-radius: 50%;
+      background: #f5a20b;
+      opacity: .22;
+      pointer-events: none;
+    }
+
+    .sn-hero-slide:nth-child(2)::after {
+      background: #c91627;
+    }
+
+    .sn-hero-photo {
+      position: absolute;
+      inset: 0 0 0 36%;
+      z-index: 1;
+    }
+
+    .sn-hero-photo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: saturate(1.12) contrast(1.04);
+    }
+
+    .sn-hero-copy {
+      position: absolute;
+      z-index: 3;
+      left: 7%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 57%;
+      color: #fff;
+    }
+
+    .sn-hero-kicker {
+      display: inline-block;
+      margin: 0 0 24px;
+      color: #ffc21a;
+      font: 800 12px/1.3 "Outfit", sans-serif;
+      letter-spacing: 3px;
+    }
+
+    .sn-hero-copy h1,
+    .sn-hero-copy h2 {
+      margin: 0;
+      color: #fff;
+      font: 900 clamp(44px, 6.2vw, 91px)/.98 "Outfit", sans-serif;
+      letter-spacing: -2.5px;
+      text-transform: uppercase;
+    }
+
+    .sn-hero-copy h1 em,
+    .sn-hero-copy h2 em {
+      font-style: normal;
+      color: #ffb20e;
+    }
+
+    .sn-hero-copy p {
+      max-width: 430px;
+      margin: 23px 0 27px;
+      color: #f0ece5;
+      font: 500 clamp(14px, 1.35vw, 18px)/1.65 "DM Sans", sans-serif;
+    }
+
+    .sn-hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 24px;
+      padding: 15px 21px;
+      background: #f4a10b;
+      color: #171717;
+      text-decoration: none;
+      font: 800 11px/1 "Outfit", sans-serif;
+      letter-spacing: 1.2px;
+      border-radius: 3px;
+      transition: background .2s, transform .2s;
+    }
+
+    .sn-hero-cta:hover {
+      background: #ffd04a;
+      transform: translateY(-2px);
+    }
+
+    .sn-hero-cta span {
+      font-size: 17px;
+    }
+
+    .sn-hero-side-label {
+      position: absolute;
+      z-index: 3;
+      right: 25px;
+      top: 25px;
+      padding: 13px 15px;
+      border: 1px solid rgba(255,255,255,.55);
+      color: #fff;
+      font: 700 9px "Outfit", sans-serif;
+      letter-spacing: 2px;
+      writing-mode: vertical-rl;
+    }
+
+    .sn-hero-arrow {
+      position: absolute;
+      z-index: 10;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 42px;
+      height: 42px;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(255,255,255,.9);
+      color: #171717;
+      font-size: 30px;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .sn-hero-arrow:hover {
+      background: #ffbd1b;
+    }
+
+    .sn-hero-prev {
+      left: 15px;
+    }
+
+    .sn-hero-next {
+      right: 15px;
+    }
+
+    .sn-hero-dots {
+      position: absolute;
+      z-index: 10;
+      bottom: 23px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 9px;
+    }
+
+    .sn-hero-dots button {
+      width: 9px;
+      height: 9px;
+      padding: 0;
+      border: 0;
+      border-radius: 20px;
+      background: rgba(255,255,255,.58);
+      cursor: pointer;
+      transition: width .25s, background .25s;
+    }
+
+    .sn-hero-dots button.active {
+      width: 32px;
+      background: #ffc21a;
+    }
+
+    .sn-hero-progress {
+      position: absolute;
+      z-index: 10;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 3px;
+      background: rgba(255,255,255,.18);
+    }
+
+    .sn-hero-progress span {
+      display: block;
+      width: 0;
+      height: 100%;
+      background: #ffc21a;
+    }
+
+    .sn-hero-progress span.run {
+      animation: snHeroProgress 5s linear forwards;
+    }
+
+    @keyframes snHeroProgress {
+      from { width: 0%; }
+      to { width: 100%; }
+    }
+
+    .sn-demo-disclaimer {
+      position: absolute;
+      z-index: 10;
+      left: 18px;
+      bottom: 12px;
+      margin: 0;
+      color: rgba(255,255,255,.65);
+      font: 700 8px "DM Sans", sans-serif;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 700px) {
+      .sn-hero-slider {
+        width: calc(100% - 20px);
+        height: 590px;
+        margin: 12px auto 25px;
+        border-radius: 15px;
+      }
+
+      .sn-hero-slide::before {
+        background: linear-gradient(
+          0deg,
+          rgba(10,10,10,.98) 0%,
+          rgba(10,10,10,.88) 39%,
+          rgba(10,10,10,.05) 100%
+        );
+      }
+
+      .sn-hero-photo {
+        inset: 0 0 27% 0;
+      }
+
+      .sn-hero-photo img {
+        object-position: center 43%;
+      }
+
+      .sn-hero-slide::after {
+        right: -35%;
+        top: -38%;
+        width: 95%;
+        height: 110%;
+        opacity: .16;
+      }
+
+      .sn-hero-copy {
+        left: 8%;
+        top: auto;
+        bottom: 68px;
+        transform: none;
+        width: 84%;
+      }
+
+      .sn-hero-kicker {
+        font-size: 9px;
+        letter-spacing: 2px;
+        margin-bottom: 13px;
+      }
+
+      .sn-hero-copy h1,
+      .sn-hero-copy h2 {
+        font-size: clamp(39px, 10vw, 60px);
+        letter-spacing: -1.4px;
+      }
+
+      .sn-hero-copy p {
+        font-size: 13px;
+        margin: 13px 0 17px;
+        max-width: 310px;
+      }
+
+      .sn-hero-cta {
+        padding: 13px 15px;
+        font-size: 9px;
+      }
+
+      .sn-hero-side-label {
+        top: 13px;
+        right: 13px;
+        font-size: 7px;
+        padding: 9px;
+      }
+
+      .sn-hero-arrow {
+        width: 32px;
+        height: 32px;
+        font-size: 24px;
+      }
+
+      .sn-hero-prev { left: 8px; }
+      .sn-hero-next { right: 8px; }
+      .sn-hero-dots { bottom: 22px; }
+
+      .sn-demo-disclaimer {
+        font-size: 6px;
+        left: 9px;
+        bottom: 8px;
+        letter-spacing: .45px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .sn-hero-progress span.run {
+        animation: none;
+      }
+    }
+  
+
+/* PREMIUM RESPONSIVE HOMEPAGE — HTML FIRST PASS. CSS file will be consolidated next. */
+:root { --premium-red:#9f0d17; --premium-yellow:#ffcf20; --premium-ivory:#fff9ef; }
+html { scroll-padding-top: 155px; }
+body { background:var(--premium-ivory); }
+.site-header.premium-header { position:sticky; top:0; z-index:110; background:var(--premium-ivory); border-bottom:1px solid #e9dccc; box-shadow:0 5px 22px #2600000a; backdrop-filter:none; }
+.premium-header .premium-nav { min-height:76px; max-width:1440px; padding:10px 5%; display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:18px; }
+.premium-header .premium-brand { position:static; transform:none; display:inline-flex; justify-self:start; align-items:center; gap:12px; color:var(--premium-red); text-decoration:none; white-space:nowrap; }
+.premium-header .shanzeh-logo-initials { display:grid; place-items:center; width:48px; height:48px; background:var(--premium-red); color:var(--premium-yellow); border-radius:13px; font:900 19px/1 'Outfit',sans-serif; letter-spacing:-1px; }
+.premium-header .premium-brand-text { display:flex; flex-direction:column; line-height:1; }
+.premium-header .shanzeh-logo-name { font:900 clamp(19px,2.1vw,29px)/1 'Outfit',sans-serif; letter-spacing:-.9px; color:var(--premium-red); }
+.premium-header .shanzeh-logo-subtitle { margin-top:3px; font:900 10px/1 'Outfit',sans-serif; letter-spacing:4px; color:#28201d; }
+.premium-header .premium-nav-links { display:flex; align-items:center; gap:40px; }
+.premium-header .premium-nav-links a { font:800 14px/1 'DM Sans',sans-serif; color:#2a211d; padding:15px 3px; border-bottom:2px solid transparent; }
+.premium-header .premium-nav-links a:hover,.premium-header .premium-nav-links a[aria-current] { color:var(--premium-red); border-color:var(--premium-red); }
+.premium-header .premium-nav-actions { justify-self:end; display:flex; align-items:center; gap:15px; }
+.premium-header .shanzeh-header-cart { position:relative; display:flex; align-items:center; padding:10px; border:0; background:transparent; color:#211b18; }
+.premium-header .cart-count { background:var(--premium-red); color:#fff; }
+.premium-header .premium-order-link { display:inline-flex; align-items:center; gap:12px; background:var(--premium-red); color:#fff; padding:15px 23px; border-radius:30px; font:800 13px/1 'DM Sans',sans-serif; white-space:nowrap; }
+.premium-header .premium-order-link:hover { background:#7f0911; }
+.premium-header .premium-location-strip { display:flex; justify-content:space-between; align-items:center; gap:14px; padding:7px max(5%,calc((100% - 1296px)/2)); background:#fff0d5; border-top:1px solid #f0e0c8; }
+.premium-header .shanzeh-location-pill { position:static; display:flex; align-items:center; gap:10px; border:0; padding:5px 0; background:transparent; color:#37251f; box-shadow:none; min-width:0; text-align:left; }
+.premium-header .shanzeh-pill-copy { display:flex; flex-direction:column; min-width:0; }
+.premium-header .shanzeh-pill-copy small { color:#8a5d43; font:800 9px/1.3 'DM Sans',sans-serif; letter-spacing:1px; }
+.premium-header .shanzeh-pill-copy strong { color:#40221d; font:800 12px/1.4 'DM Sans',sans-serif; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.premium-header .shanzeh-pill-icon { font-size:19px; }
+.premium-header .shanzeh-pill-chevron { font-size:19px; }
+.premium-header .premium-delivery-price { color:#654d3e; font:600 12px/1.4 'DM Sans',sans-serif; white-space:nowrap; }
+.premium-header .premium-delivery-price strong { color:var(--premium-red); }
+.sn-hero-slider { width:min(100%,1500px); height:clamp(460px,44vw,610px); margin:0 auto; border-radius:0; box-shadow:none; }
+.sn-hero-copy { left:8%; width:52%; }
+.sn-hero-copy h1,.sn-hero-copy h2 { font-size:clamp(45px,6.3vw,94px); text-transform:none; letter-spacing:-2px; line-height:1.01; }
+.sn-hero-copy h1 em,.sn-hero-copy h2 em { color:var(--premium-yellow); }
+.sn-hero-cta { background:var(--premium-yellow); border-radius:40px; color:#211b16; padding:17px 24px; letter-spacing:.3px; font-size:12px; }
+.sn-hero-kicker { color:#ffdb6a; }
+.promise-strip { background:#fff9ef; color:#74271d; border-bottom:1px solid #eddfcd; padding:22px 5%; }
+.menu-collections { background:var(--premium-ivory); }
+.menu-category-section { scroll-margin-top:155px; }
+@media(max-width:900px) {
+ .premium-header .premium-nav { grid-template-columns:1fr auto; min-height:68px; padding:9px 4%; }
+ .premium-header .premium-nav-links { display:none; }
+ .premium-header .premium-nav-actions { gap:8px; }
+ .premium-header .premium-order-link { padding:12px 15px; font-size:11px; }
+ .premium-header .premium-location-strip { padding:6px 4%; }
+ .sn-hero-slider { height:500px; }
+}
+@media(max-width:600px) {
+ html { scroll-padding-top:125px; }
+ .premium-header .premium-nav { min-height:61px; }
+ .premium-header .shanzeh-logo-initials { width:39px; height:39px; border-radius:10px; font-size:16px; }
+ .premium-header .premium-brand { gap:8px; }
+ .premium-header .shanzeh-logo-name { font-size:19px; }
+ .premium-header .shanzeh-logo-subtitle { font-size:8px; letter-spacing:2.7px; }
+ .premium-header .premium-order-link { padding:11px 13px; }
+ .premium-header .shanzeh-header-cart { padding:7px; }
+ .premium-header .premium-delivery-price { font-size:10px; }
+ .premium-header .shanzeh-pill-copy strong { font-size:11px; max-width:155px; }
+ .premium-header .shanzeh-pill-copy small { font-size:8px; }
+ .sn-hero-slider { width:100%; height:clamp(390px,110vw,480px); margin:0; border-radius:0; }
+ .sn-hero-photo { inset:0 0 23% 0; }
+ .sn-hero-copy { left:6%; bottom:55px; width:88%; }
+ .sn-hero-copy h1,.sn-hero-copy h2 { font-size:clamp(37px,10vw,53px); }
+ .sn-hero-copy p { max-width:310px; font-size:12px; line-height:1.5; margin:12px 0 16px; }
+ .sn-hero-kicker { margin-bottom:10px; font-size:9px; }
+ .sn-hero-cta { padding:13px 19px; font-size:10px; }
+ .sn-hero-side-label { display:none; }
+ .promise-strip { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; padding:15px 5%; font-size:9px; text-align:center; letter-spacing:.3px; }
+ .menu-category-section { scroll-margin-top:125px; }
+}
+
+  </style>
+<style>
+/* DEHLI KAMAL — Warm Spice & Heritage palette */
+:root { --premium-ivory:#FFF8EC; --premium-red:#561B2A; --premium-yellow:#D99A28; }
+body { background:#FFF8EC; color:#561B2A; }
+.sn-hero-slider { background:#561B2A; }
+.sn-hero-slide::before { background:linear-gradient(90deg,rgba(47,9,23,.97),rgba(60,14,29,.89) 35%,rgba(60,14,29,.48) 62%,transparent); }
+.sn-hero-slide::after,.sn-hero-slide:nth-child(2)::after { background:#D99A28; }
+.sn-hero-kicker,.sn-hero-copy h1 em,.sn-hero-copy h2 em { color:#F3BE52; }
+.sn-hero-cta { background:#D99A28; color:#32101B; }
+.menu-collections,.menu-category-bar { background:#FFF8EC; }
+</style>
+</head>
+
+<body>
+
+  
+<!-- DEHLI KAMAL NIHARI — CENTERED COW LOGO HEADER -->
+<header class="site-header premium-header sn-reference-header">
+  <div class="sn-header-inner">
+    <div class="sn-header-left">
+      <button type="button" class="sn-header-pill sn-location-button" id="headerLocationBtn" aria-label="Change delivery or pickup location">
+        <span class="sn-pill-icon" aria-hidden="true">⌖</span>
+        <span class="sn-pill-copy"><small id="headerOrderType">SELECT LOCATION</small><strong id="headerLocationText">Choose your Karachi area</strong></span>
+        <span class="sn-chevron" aria-hidden="true">›</span>
+      </button>
+      <a class="sn-header-pill sn-phone-pill" href="tel:+923001052625" aria-label="Call Dehli Kamal Nihari & Sheermal House phone number">
+        <span class="sn-pill-icon" aria-hidden="true">☎</span><strong>0300 1052625</strong>
+      </a>
+    </div>
+    <a href="#home" class="sn-header-logo" aria-label="Dehli Kamal Nihari & Sheermal House home">
+      <span class="sn-logo-chefhat" aria-hidden="true"><span class="sn-hat-puff"></span><span class="sn-hat-band"></span></span>
+      <span class="sn-logo-cow" aria-hidden="true">✦</span>
+      <span class="sn-logo-caption">DEHLI KAMAL<small>NIHARI</small></span>
+    </a>
+    <div class="sn-header-right">
+      <button type="button" class="cart-trigger sn-cart-button" id="cartOpen" aria-label="Open shopping cart"><span aria-hidden="true">🛒</span><span class="cart-count" id="cartCount">0</span></button>
+    </div>
+  </div>
+</header>
+
+  <main>
+
+    <!-- =====================================
+         PROMOTIONAL HERO SLIDER
+         ===================================== -->
+    <section
+      class="sn-hero-slider"
+      id="home"
+      aria-label="Dehli Kamal Nihari & Sheermal House promotions"
+    >
+
+      <div class="sn-hero-track">
+
+        <!-- SLIDE 1 -->
+        <article class="sn-hero-slide active"
+                 aria-hidden="false">
+
+          <div class="sn-hero-photo">
+            <img
+              src="https://nutriscan.app/calories-nutrition/images/nihari-a0961.webp"
+              alt="Food photograph of Pakistani nihari in a clay bowl"
+            >
+          </div>
+
+          <div class="sn-hero-copy">
+            <span class="sn-hero-kicker">
+              DEHLI KAMAL NIHARI · KARACHI
+            </span>
+
+            <h1>
+              DEHLI KAMAL<br>
+              <em>NIHARI.</em>
+            </h1>
+
+            <p>
+              Slow-cooked comfort, bold Karachi flavour. Discover our signature Nihari and more.
+            </p>
+
+            <a href="#menu" class="sn-hero-cta">
+              ORDER ONLINE <span>↗</span>
+            </a>
+          </div>
+
+          <span class="sn-hero-side-label">
+            AUTHENTIC DESI FLAVOUR
+          </span>
+
+        </article>
+
+        <!-- SLIDE 2 -->
+        <article class="sn-hero-slide"
+                 aria-hidden="true">
+
+          <div class="sn-hero-photo">
+            <img
+              src="https://assets-global.website-files.com/60d34b8627f6e735cf28df18/627b52e32833af41c139abf6_Beef%20Nihari%20Hero%204.3.jpg"
+              alt="Food photograph of richly garnished beef nihari"
+            >
+          </div>
+
+          <div class="sn-hero-copy">
+            <span class="sn-hero-kicker">
+              A CLASSIC, FULL OF CHARACTER
+            </span>
+
+            <h2>
+              SLOW COOKED.<br>
+              <em>RICHLY LOVED.</em>
+            </h2>
+
+            <p>
+              Deep colour, warming spices and the
+              comfort of a true favourite.
+            </p>
+
+            <a href="#menu" class="sn-hero-cta">
+              FIND YOUR FAVOURITE <span>↗</span>
+            </a>
+          </div>
+
+          <span class="sn-hero-side-label">
+            MADE FOR NIHARI LOVERS
+          </span>
+
+        </article>
+
+        <!-- SLIDE 3 -->
+        <article class="sn-hero-slide"
+                 aria-hidden="true">
+
+          <div class="sn-hero-photo">
+            <img
+              src="https://desi-bites.net/assets/dish-nihari-B46cdm7I.webp"
+              alt="Food photograph of nihari served with naan"
+            >
+          </div>
+
+          <div class="sn-hero-copy">
+            <span class="sn-hero-kicker">
+              YOUR KARACHI FOOD CRAVING
+            </span>
+
+            <h2>
+              MAKE EVERY<br>
+              <em>BITE COUNT.</em>
+            </h2>
+
+            <p>
+              Your nihari moment is just a few clicks away.
+            </p>
+
+            <a href="#menu" class="sn-hero-cta">
+              ORDER ONLINE <span>↗</span>
+            </a>
+          </div>
+
+          <span class="sn-hero-side-label">
+            DEHLI KAMAL NIHARI
+          </span>
+
+        </article>
+
+      </div>
+
+      <!-- SLIDER ARROWS -->
+      <button
+        class="sn-hero-arrow sn-hero-prev"
+        type="button"
+        aria-label="Previous banner"
+      >‹</button>
+
+      <button
+        class="sn-hero-arrow sn-hero-next"
+        type="button"
+        aria-label="Next banner"
+      >›</button>
+
+      <!-- SLIDER DOTS -->
+      <div class="sn-hero-dots"
+           aria-label="Choose promotional banner">
+
+        <button
+          class="active"
+          type="button"
+          aria-label="Banner 1"
+          aria-current="true"
+        ></button>
+
+        <button
+          type="button"
+          aria-label="Banner 2"
+        ></button>
+
+        <button
+          type="button"
+          aria-label="Banner 3"
+        ></button>
+      </div>
+
+      <!-- PROGRESS BAR -->
+      <div class="sn-hero-progress">
+        <span></span>
+      </div>
+
+      <p class="sn-demo-disclaimer">
+        DEMO FOOD PHOTOGRAPHY · WILL BE REPLACED WITH
+        DEHLI KAMAL NIHARI'S OWN PHOTOS
+      </p>
+
+    </section>
+
+    <!-- PROMISE STRIP -->
+    <div class="promise-strip">
+      <span>✦ AUTHENTIC TASTE</span>
+      <span>✦ KARACHI DELIVERY</span>
+      <span>✦ FRESHLY PREPARED</span>
+      <span>✦ PICKUP AVAILABLE</span>
+    </div>
+
+    <!-- CATEGORY NAVIGATION — sticks to top while browsing the menu -->
+    <nav class="menu-category-bar" id="menuCategoryBar" aria-label="Food categories">
+      <div class="menu-category-inner" id="menuCategoryInner">
+        <span class="menu-active-pill" id="menuActivePill" aria-hidden="true"></span>
+        <a href="#nihari" class="menu-category-link active" data-category="nihari" aria-current="true">Nihari</a>
+        <a href="#biryani-pulao" class="menu-category-link" data-category="biryani-pulao">Pakistani Mains</a>
+        <a href="#breakfast" class="menu-category-link" data-category="breakfast">Tandoor</a>
+      </div>
+    </nav>
+
+    <!-- MENU SECTIONS: original category cards remain powered by script.js -->
+    <div id="menu" class="menu-collections">
+      <section class="menu-section menu-category-section" id="nihari" data-menu-section="nihari">
+        <img class="shanzeh-photo-banner" src="nihari-banner.webp" alt="Nihari menu banner" loading="lazy">
+        <div class="menu-grid" id="menuGrid"></div>
+      </section>
+      <section class="menu-section menu-category-section" id="biryani-pulao" data-menu-section="biryani-pulao">
+        <img class="shanzeh-photo-banner" src="biryani-banner.webp" alt="Pakistani mains menu banner" loading="lazy">
+        <div class="menu-grid" id="riceMenuGrid"></div>
+      </section>
+
+      <section class="menu-section menu-category-section" id="breakfast" data-menu-section="breakfast">
+        <img class="shanzeh-photo-banner" src="breakfast-banner.webp" alt="Tandoor menu banner" loading="lazy">
+        <div class="menu-grid" id="breakfastMenuGrid"></div>
+      </section>
+    </div>
+
+    <section class="shanzeh-intro">
+      <div class="shanzeh-intro-content">
+        <p>
+          At Dehli Kamal Nihari & Sheermal House, traditional Pakistani food is more than just a
+          meal — it's an experience worth sharing. Inspired by the rich
+          culinary traditions of Karachi, we bring together aromatic
+          spices, carefully prepared recipes, and authentic Pakistani
+          flavours to create dishes that leave a lasting impression.
+          From our signature Nihari to delicious Biryani, Pulao, and
+          traditional breakfast favourites, every item on our menu
+          celebrates the food Karachi loves. Whether you're gathering
+          with family or simply satisfying a craving, Dehli Kamal Nihari & Sheermal House
+          is here to make every meal memorable.
+        </p>
+      </div>
+    </section>
+    
+    </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contact">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <div class="brand-name">
+          DEHLI KAMAL <strong>NIHARI</strong>
+        </div>
+
+        <p>
+          Karachi ki asli nihari, made for every craving.
+        </p>
+      </div>
+
+      <div class="shanzeh-shop-address">
+        <h3>Visit Dehli Kamal Nihari & Sheermal House</h3>
+        <p>
+          W28P+JC5, Nazimabad No. 4,
+          Block 4 Nazimabad, Karachi
+        </p>
+        
+<a
+href="https://www.google.com/maps/place/Dehli Kamal+nihari/@24.9165201,67.0335359,657m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3eb33f0043072c07:0x87b01538ca1580a1!8m2!3d24.9165153!4d67.0361108!16s%2Fg%2F11zxfcz41j"
+target="_blank"
+rel="noopener noreferrer"
+>
+📍 Get Directions
+</a>
+
+      </div>
+      
+      <div class="footer-links">
+        <a href="#home">HOME</a>
+        <a href="#menu">MENU</a>
+        
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      
+<span class="footer-credit">
+  © <span id="year"></span> Powered by
+  <strong class="footer-hs">HS</strong>
+</span>
+
+
+      <span>MADE FOR NIHARI LOVERS ✦</span>
+    </div>
+  </footer>
+
+  <!-- =====================================
+       CART DRAWER
+       ===================================== -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <aside
+    class="cart-drawer"
+    id="cartDrawer"
+    aria-label="Shopping cart"
+    aria-modal="true"
+    role="dialog"
+  >
+
+    <div class="cart-header">
+      <div>
+        <span class="section-kicker">
+          YOUR ORDER
+        </span>
+
+        <h2>
+          MY CART
+          <span id="cartTitleCount">(0)</span>
+        </h2>
+      </div>
+
+      <button
+        class="close-cart"
+        id="cartClose"
+        type="button"
+        aria-label="Close cart"
+      >✕</button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+      <p class="empty-cart">
+        Your cart is empty. Let's fix that!
+      </p>
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>SUBTOTAL</span>
+        <strong id="cartSubtotal">Rs. 0</strong>
+      </div>
+
+      <p class="delivery-note">
+        Delivery charges: Rs. 350 within Karachi
+      </p>
+
+      <button
+        class="checkout-button"
+        id="checkoutOpen"
+        type="button"
+      >
+        PROCEED TO CHECKOUT ↗
+      </button>
+    </div>
+
+  </aside>
+
+  <!-- =====================================
+       CHECKOUT MODAL
+       ===================================== -->
+  <div class="checkout-overlay" id="checkoutOverlay">
+
+    <div
+      class="checkout-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="checkoutHeading"
+    >
+
+      <button
+        class="checkout-close"
+        id="checkoutClose"
+        type="button"
+        aria-label="Close checkout"
+      >✕</button>
+
+      <span class="section-kicker">
+        ALMOST THERE
+      </span>
+
+      <h2 id="checkoutHeading">
+        COMPLETE YOUR ORDER
+      </h2>
+
+      <form id="checkoutForm">
+
+        <label for="customerName">
+          FULL NAME
+        </label>
+
+        <input
+          id="customerName"
+          name="customerName"
+          placeholder="Your name"
+          required
+          autocomplete="name"
+        >
+
+        <label for="customerPhone">
+          PHONE NUMBER
+        </label>
+
+        <input
+          id="customerPhone"
+          name="customerPhone"
+          type="tel"
+          placeholder="03XXXXXXXXX"
+          required
+          autocomplete="tel"
+        >
+
+        <label for="customerAddress">
+          DELIVERY ADDRESS (KARACHI)
+        </label>
+
+        <textarea
+          id="customerAddress"
+          name="customerAddress"
+          placeholder="House number, street, area, Karachi"
+          rows="3"
+          required
+        ></textarea>
+
+        <label for="customerNotes">
+          ORDER NOTES (OPTIONAL)
+        </label>
+
+        <textarea
+          id="customerNotes"
+          name="customerNotes"
+          placeholder="Any special instructions?"
+          rows="2"
+        ></textarea>
+
+        <div class="checkout-summary">
+
+          <div>
+            <span>SUBTOTAL</span>
+            <strong id="checkoutSubtotal">
+              Rs. 0
+            </strong>
+          </div>
+
+          <div>
+            <span>DELIVERY</span>
+            <strong>Rs. 350</strong>
+          </div>
+
+          <div class="grand-total">
+            <span>TOTAL</span>
+            <strong id="checkoutTotal">
+              Rs. 350
+            </strong>
+          </div>
+
+        </div>
+
+        <button
+          class="checkout-button"
+          type="submit"
+        >
+          PLACE ORDER ↗
+        </button>
+
+        <p
+          class="checkout-disclaimer"
+          id="checkoutMessage"
+        >
+          Demo checkout — online order submission
+          is not active yet.
+        </p>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- =====================================
+       ORDER TYPE SELECTION POPUP
+       ===================================== -->
+  <div class="order-modal-overlay" id="orderModal">
+
+    <div
+      class="order-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="orderModalTitle"
+    >
+
+      <div class="order-modal-banner">
+        <div class="order-modal-logo">
+          <span>✦</span>
+        </div>
+      </div>
+
+      <div class="order-modal-content">
+
+        <h2 id="orderModalTitle">
+          Select Your Order Type
+        </h2>
+
+        <div class="order-type-switch">
+
+          <button
+            type="button"
+            class="order-type-btn active"
+            id="deliveryTab"
+          >
+            Delivery
+          </button>
+
+          <button
+            type="button"
+            class="order-type-btn"
+            id="pickupTab"
+          >
+            Pick-Up
+          </button>
+
+        </div>
+
+        <p
+          class="order-modal-help"
+          id="orderModalHelp"
+        >
+          Please select your location
+        </p>
+
+        <button
+          type="button"
+          class="use-location-btn"
+          id="useLocationBtn"
+        >
+          ◎ &nbsp; Use Current Location
+        </button>
+
+        <p
+          class="location-status"
+          id="locationStatus"
+          aria-live="polite"
+        ></p>
+
+        <!-- DELIVERY OPTIONS -->
+        <div id="deliveryOptions">
+
+          <label for="deliveryArea">
+            Select Your Area
+          </label>
+
+          <select id="deliveryArea">
+            <option value="">
+              Please select your location
+            </option>
+            <option>Gulshan-e-Iqbal</option>
+            <option>Gulistan-e-Johar</option>
+            <option>North Nazimabad</option>
+            <option>Nazimabad</option>
+            <option>Federal B Area</option>
+            <option>Saddar</option>
+            <option>Clifton</option>
+            <option>DHA</option>
+            <option>PECHS</option>
+            <option>Bahadurabad</option>
+            <option>Tariq Road</option>
+            <option>Malir</option>
+            <option>Korangi</option>
+            <option>Landhi</option>
+            <option>Shah Faisal Colony</option>
+            <option>Gulberg</option>
+            <option>North Karachi</option>
+            <option>New Karachi</option>
+            <option>Buffer Zone</option>
+            <option>Orangi Town</option>
+            <option>Baldia Town</option>
+            <option>Lyari</option>
+            <option>Garden</option>
+            <option>Jamshed Road</option>
+            <option>Defence View</option>
+            <option>Scheme 33</option>
+            <option>Safoora</option>
+            <option>Surjani Town</option>
+            <option>Other Karachi Area</option>
+          </select>
+
+        </div>
+
+        <!-- PICKUP OPTIONS -->
+        <div id="pickupOptions" hidden>
+
+          <label for="pickupBranch">
+            Select Branch
+          </label>
+
+          <select id="pickupBranch">
+            <option value="main">
+              Dehli Kamal Nihari & Sheermal House — Main Branch
+            </option>
+          </select>
+
+          <div class="branch-location-card">
+            <strong>📍 Branch Location</strong>
+
+            
+<p>
+  W28P+JC5, Nazimabad No. 4,
+  Block 4 Nazimabad, Karachi
+</p>
+
+
+<a
+  href="https://www.google.com/maps/place/Dehli Kamal+nihari/@24.9165201,67.0335359,657m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3eb33f0043072c07:0x87b01538ca1580a1!8m2!3d24.9165153!4d67.0361108!16s%2Fg%2F11zxfcz41j"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  📍 Get Directions
+</a>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="order-modal-footer">
+        <button
+          type="button"
+          class="order-modal-select"
+          id="confirmOrderType"
+        >
+          Select
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =====================================
+       SMOOTH AUTOPLAY SLIDER JAVASCRIPT
+       ===================================== -->
+  <script>
+    (() => {
+      "use strict";
+
+      const slider = document.querySelector(
+        ".sn-hero-slider"
+      );
+
+      if (!slider) return;
+
+      const track = slider.querySelector(
+        ".sn-hero-track"
+      );
+
+      const slides = Array.from(
+        track.querySelectorAll(".sn-hero-slide")
+      );
+
+      const dots = Array.from(
+        slider.querySelectorAll(
+          ".sn-hero-dots button"
+        )
+      );
+
+      const progress = slider.querySelector(
+        ".sn-hero-progress span"
+      );
+
+      const prev = slider.querySelector(
+        ".sn-hero-prev"
+      );
+
+      const next = slider.querySelector(
+        ".sn-hero-next"
+      );
+
+      if (slides.length < 2) return;
+
+      const SLIDE_INTERVAL = 5000;
+      const TRANSITION_DURATION = 950;
+
+      const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+      let current = 0;
+      let position = 0;
+      let timer = null;
+      let locked = false;
+
+      // Clone the first slide for seamless looping.
+      const firstClone = slides[0].cloneNode(true);
+
+      firstClone.classList.remove("active");
+      firstClone.setAttribute(
+        "aria-hidden",
+        "true"
+      );
+
+      track.appendChild(firstClone);
+
+      // Set transform transition with important priority
+      // to avoid conflicts from the existing stylesheet.
+      function setTransition(enabled) {
+        const value = enabled && !reducedMotion
+          ? `transform ${TRANSITION_DURATION}ms cubic-bezier(.22,1,.36,1)`
+          : "none";
+
+        track.style.setProperty(
+          "transition",
+          value,
+          "important"
+        );
+      }
+
+      function updateIndicators() {
+        slides.forEach((slide, index) => {
+          const active = index === current;
+
+          slide.classList.toggle(
+            "active",
+            active
+          );
+
+          slide.setAttribute(
+            "aria-hidden",
+            String(!active)
+          );
+        });
+
+        dots.forEach((dot, index) => {
+          const active = index === current;
+
+          dot.classList.toggle(
+            "active",
+            active
+          );
+
+          if (active) {
+            dot.setAttribute(
+              "aria-current",
+              "true"
+            );
+          } else {
+            dot.removeAttribute(
+              "aria-current"
+            );
+          }
+        });
+
+        if (progress) {
+          progress.classList.remove("run");
+
+          void progress.offsetWidth;
+
+          if (!reducedMotion) {
+            progress.classList.add("run");
+          }
+        }
+      }
+
+      function resetToFirst() {
+        setTransition(false);
+
+        position = 0;
+
+        track.style.transform =
+          "translate3d(0,0,0)";
+
+        // Force the reset to complete without animation.
+        void track.offsetWidth;
+
+        locked = false;
+      }
+
+      function moveTo(nextIndex, animate = true) {
+        if (locked) return;
+
+        const movingToClone =
+          nextIndex === slides.length;
+
+        current = movingToClone
+          ? 0
+          : (
+              nextIndex + slides.length
+            ) % slides.length;
+
+        const targetPosition = movingToClone
+          ? slides.length
+          : current;
+
+        const shouldAnimate =
+          animate && !reducedMotion;
+
+        locked = shouldAnimate;
+
+        // Commit the current slide before moving.
+        // This avoids the browser merging two frames.
+        void track.offsetWidth;
+
+        setTransition(shouldAnimate);
+
+        position = targetPosition;
+
+        track.style.transform =
+          `translate3d(-${position * 100}%,0,0)`;
+
+        updateIndicators();
+
+        if (!locked && movingToClone) {
+          resetToFirst();
+        }
+      }
+
+      track.addEventListener(
+        "transitionend",
+        (event) => {
+          if (
+            event.target !== track ||
+            event.propertyName !== "transform"
+          ) {
+            return;
+          }
+
+          if (position === slides.length) {
+            resetToFirst();
+          } else {
+            locked = false;
+          }
+        }
+      );
+
+      function restartAutoplay() {
+        clearInterval(timer);
+
+        timer = setInterval(() => {
+          if (locked) return;
+
+          const nextIndex =
+            current === slides.length - 1
+              ? slides.length
+              : current + 1;
+
+          moveTo(nextIndex);
+        }, SLIDE_INTERVAL);
+      }
+
+      function goTo(index) {
+        if (locked) return;
+
+        moveTo(index);
+        restartAutoplay();
+      }
+
+      prev.addEventListener("click", () => {
+        goTo(current - 1);
+      });
+
+      next.addEventListener("click", () => {
+        const nextIndex =
+          current === slides.length - 1
+            ? slides.length
+            : current + 1;
+
+        goTo(nextIndex);
+      });
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+          goTo(index);
+        });
+      });
+
+      document.addEventListener(
+        "visibilitychange",
+        () => {
+          if (document.hidden) {
+            clearInterval(timer);
+          } else {
+            restartAutoplay();
+          }
+        }
+      );
+
+      // Initialize without an opening animation.
+      moveTo(0, false);
+      restartAutoplay();
+
+      console.log(
+        "Dehli Kamal Nihari & Sheermal House smooth slider initialized."
+      );
+    })();
+  </script>
+
+  <!-- ORIGINAL ORDERING SYSTEM -->
+  <script src="script.js"></script>
+
+</body>
+</html>
