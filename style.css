@@ -3110,3 +3110,21 @@ html{scroll-behavior:smooth}body{background:#FFF8EC;color:#561B2A}
 .add-btn{background:#561B2A!important;color:#fff!important}
 .sn-hero-photo img{width:100%;height:100%;object-fit:cover}
 @media(max-width:650px){.dkn-menu-section{padding-top:16px}.dkn-section-heading{padding-bottom:16px}}
+
+/* DKN V2: definitive popup theme; overrides legacy Shanzeh declarations */
+:root { --dkn-ivory:#FFF8EC; --dkn-burgundy:#561B2A; --dkn-gold:#D99A28; }
+#orderModal .order-modal {background:#FFF8EC!important;color:#561B2A!important;border:1px solid #E9D8BD!important;}
+#orderModal .order-modal-banner {background:#561B2A!important;}
+#orderModal .order-modal-logo {background:#FFF8EC!important;color:#561B2A!important;box-shadow:none!important;}
+#orderModal .order-modal-logo span {color:#561B2A!important;}
+#orderModal .order-modal-content,#orderModal .order-modal-footer {background:#FFF8EC!important;color:#561B2A!important;}
+#orderModal .order-modal-content h2,#orderModal .order-modal-help,#orderModal label,#orderModal .branch-location-card strong,#orderModal .branch-location-card p {color:#561B2A!important;}
+#orderModal .order-type-switch {background:#F2E5D6!important;border-color:#E4CCAE!important;}
+#orderModal .order-type-btn {color:#561B2A!important;}
+#orderModal .order-type-btn.active {background:#561B2A!important;color:#FFF8EC!important;box-shadow:none!important;}
+#orderModal .use-location-btn {background:#FFF8EC!important;color:#561B2A!important;border-color:#D99A28!important;}
+#orderModal #deliveryArea,#orderModal #pickupBranch {background:#FFFFFF!important;color:#561B2A!important;border-color:#DCC5A6!important;}
+#orderModal #deliveryArea:focus,#orderModal #pickupBranch:focus {border-color:#D99A28!important;outline:2px solid #D99A2855!important;}
+#orderModal .branch-location-card {background:#F8EDDF!important;border-color:#E4CCAE!important;}
+#orderModal .order-modal-select {background:#D99A28!important;color:#38101B!important;border-color:#D99A28!important;}
+#orderModal .order-modal-footer {border-color:#E4CCAE!important;}

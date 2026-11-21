@@ -546,6 +546,21 @@ document.addEventListener("DOMContentLoaded", () => {
         changeType("delivery");
       });
     
+      const branchInfo = document.getElementById("pickupBranchDetails");
+      const branches = {
+        nazimabad: {address:"Block A Plot 2/1, Nazimabad 3, Block 3 Nazimabad, Karachi", label:"Nazimabad"},
+        paradise: {address:"R-30, Paradise Cottages, Paradise Chowk, Abul Hasan Isphani Road, Karachi", label:"Paradise Chowk"},
+        ramswami: {address:"Ramswami / Ranchor Line area (near Waheed Chai), Karachi", label:"Ramswami / Ranchor Line"}
+      };
+      function updateBranchDetails() {
+        if (!pickupBranch || !branchInfo) return;
+        const selected = branches[pickupBranch.value] || branches.nazimabad;
+        const p = branchInfo.querySelector("p");
+        const a = branchInfo.querySelector("a");
+        if (p) p.textContent = selected.address;
+        if (a) a.href = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(selected.address + ", Pakistan");
+      }
+      if (pickupBranch) { pickupBranch.addEventListener("change", updateBranchDetails); updateBranchDetails(); }
       pickupTab.addEventListener("click", () => {
         changeType("pickup");
       });
@@ -763,9 +778,7 @@ document.addEventListener("DOMContentLoaded", () => {
       } else if (saved.type === "pickup") {
         typeLabel.textContent = "PICKUP";
         locationLabel.textContent =
-          saved.branch === "main"
-            ? "Dehli Kamal Nihari — Main Branch"
-            : saved.branch || "Select Branch";
+          ({nazimabad:"Pickup — Nazimabad",paradise:"Pickup — Paradise Chowk",ramswami:"Pickup — Ramswami"})[saved.branch] || saved.branch || "Select Branch";
       }
     }
   

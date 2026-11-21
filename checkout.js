@@ -36,6 +36,7 @@ $("orderForm").addEventListener("submit",e=>{
  const lines = [
   "*DEHLI KAMAL NIHARI — NEW ORDER*",
   `Order type: ${pickup ? "Pickup" : "Delivery"}`,
+  ...(pickup ? [`Pickup branch: ${{nazimabad:"Nazimabad — Block A Plot 2/1",paradise:"Paradise Chowk — Abul Hasan Isphani Road",ramswami:"Ramswami / Ranchor Line — Near Waheed Chai"}[preference?.branch] || preference?.branch || "Nazimabad"}`] : []),
   `Name: ${$("title").value} ${$("fullName").value.trim()}`,
   `Phone: ${$("phone").value}`,
   ...(alt ? [`Alternate phone: ${alt}`] : []),
