@@ -167,8 +167,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
   ];
   
-    // Food photography is pending verified commercially usable image sources.
-    const foodImages = {"nihari": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1600&q=85", "biryani-pulao": "https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=850&q=80", "paye": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=1600&q=85", "haleem": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1600&q=85", "karahi-qorma": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=1600&q=85", "desi-sides": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=850&q=80", "breakfast": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=850&q=80"};
+    // Local generated food visuals; replace category illustrations with dish-specific approved photographs before commercial launch.
+    const foodImages = {"nihari":"assets/nihari-banner.webp","biryani-pulao":"assets/biryani-banner.webp","paye":"assets/paye-banner.webp","haleem":"assets/haleem-banner.webp","karahi-qorma":"assets/karahi-banner.webp","desi-sides":"assets/biryani-pulao.webp","breakfast":"assets/biryani-pulao.webp"};
   
     const cart = new Map();
     function getOrderPreference() {
